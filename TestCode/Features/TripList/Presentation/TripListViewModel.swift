@@ -11,17 +11,30 @@ import Combine
 final class TripListViewModel: ObservableObject {
     
     @Published var viewState: TripListViewState
+    private let fetchTrips: FetchTrips
+    private var cancellables: Set<AnyCancellable> = []
     
-    init(viewState: TripListViewState) {
+    init(viewState: TripListViewState, fetchTrips: FetchTrips) {
         self.viewState = viewState
+        self.fetchTrips = fetchTrips
     }
     
     func onAppear() {
-       fetchTrips()
+        fetchTripList()
     }
     
-    private func fetchTrips() {
+    private func fetchTripList() {
         viewState.listState = .loading
+        
+        fetchTrips.fetchTrips()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
+                if case .failure = completion {
+                    self?.viewState.listState = .error
+                }
+            } receiveValue: { [weak self] trips in
+                self?.viewState.listState = .loaded
+            }.store(in: &cancellables)
     }
     
 }

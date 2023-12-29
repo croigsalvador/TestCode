@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */; };
 		1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */; };
 		1DEDA4A52B3EC1BA00A0897A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */; };
 		1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A62B3EC1BA00A0897A /* ViewController.swift */; };
@@ -23,6 +24,10 @@
 		1DEDA4E52B3ED5C000A0897A /* TripListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4E42B3ED5C000A0897A /* TripListViewModelTests.swift */; };
 		1DEDA4E92B3ED65F00A0897A /* TripListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4E82B3ED65F00A0897A /* TripListViewState.swift */; };
 		1DEDA4EC2B3ED70A00A0897A /* TripListViewStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4EB2B3ED70A00A0897A /* TripListViewStateMock.swift */; };
+		1DEDA4F12B3EDDC500A0897A /* FetchTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4F02B3EDDC500A0897A /* FetchTrips.swift */; };
+		1DEDA4F32B3EDE1100A0897A /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4F22B3EDE1100A0897A /* Trip.swift */; };
+		1DEDA4F52B3EDE5C00A0897A /* FetchTripsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4F42B3EDE5C00A0897A /* FetchTripsMock.swift */; };
+		1DEDA4F82B3EE21A00A0897A /* Publisher+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4F72B3EE21A00A0897A /* Publisher+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicError.swift; sourceTree = "<group>"; };
 		1DEDA49F2B3EC1BA00A0897A /* TestCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,10 @@
 		1DEDA4E42B3ED5C000A0897A /* TripListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewModelTests.swift; sourceTree = "<group>"; };
 		1DEDA4E82B3ED65F00A0897A /* TripListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewState.swift; sourceTree = "<group>"; };
 		1DEDA4EB2B3ED70A00A0897A /* TripListViewStateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewStateMock.swift; sourceTree = "<group>"; };
+		1DEDA4F02B3EDDC500A0897A /* FetchTrips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTrips.swift; sourceTree = "<group>"; };
+		1DEDA4F22B3EDE1100A0897A /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		1DEDA4F42B3EDE5C00A0897A /* FetchTripsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTripsMock.swift; sourceTree = "<group>"; };
+		1DEDA4F72B3EE21A00A0897A /* Publisher+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DCA7CD12B3EE49E0044DC0B /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		1DEDA4962B3EC1BA00A0897A = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +173,8 @@
 		1DEDA4D32B3EC9E600A0897A /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1DCA7CD12B3EE49E0044DC0B /* Error */,
+				1DEDA4F62B3EE21A00A0897A /* Combine */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -198,6 +218,7 @@
 		1DEDA4E02B3ED55800A0897A /* TripList */ = {
 			isa = PBXGroup;
 			children = (
+				1DEDA4ED2B3EDD7B00A0897A /* Domain */,
 				1DEDA4E12B3ED56200A0897A /* Presentation */,
 			);
 			path = TripList;
@@ -232,8 +253,42 @@
 			isa = PBXGroup;
 			children = (
 				1DEDA4EB2B3ED70A00A0897A /* TripListViewStateMock.swift */,
+				1DEDA4F42B3EDE5C00A0897A /* FetchTripsMock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		1DEDA4ED2B3EDD7B00A0897A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1DEDA4EF2B3EDDB300A0897A /* Model */,
+				1DEDA4EE2B3EDDA900A0897A /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1DEDA4EE2B3EDDA900A0897A /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				1DEDA4F02B3EDDC500A0897A /* FetchTrips.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		1DEDA4EF2B3EDDB300A0897A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DEDA4F22B3EDE1100A0897A /* Trip.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DEDA4F62B3EE21A00A0897A /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				1DEDA4F72B3EE21A00A0897A /* Publisher+Utils.swift */,
+			);
+			path = Combine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,9 +429,13 @@
 			files = (
 				1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */,
 				1DEDA4E32B3ED57F00A0897A /* TripListViewModel.swift in Sources */,
+				1DEDA4F82B3EE21A00A0897A /* Publisher+Utils.swift in Sources */,
 				1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */,
+				1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */,
 				1DEDA4E92B3ED65F00A0897A /* TripListViewState.swift in Sources */,
 				1DEDA4A52B3EC1BA00A0897A /* SceneDelegate.swift in Sources */,
+				1DEDA4F32B3EDE1100A0897A /* Trip.swift in Sources */,
+				1DEDA4F12B3EDDC500A0897A /* FetchTrips.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +445,7 @@
 			files = (
 				1DEDA4E52B3ED5C000A0897A /* TripListViewModelTests.swift in Sources */,
 				1DEDA4EC2B3ED70A00A0897A /* TripListViewStateMock.swift in Sources */,
+				1DEDA4F52B3EDE5C00A0897A /* FetchTripsMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
