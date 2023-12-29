@@ -13,9 +13,12 @@
 		1DEDA4AA2B3EC1BA00A0897A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A82B3EC1BA00A0897A /* Main.storyboard */; };
 		1DEDA4AC2B3EC1BB00A0897A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4AB2B3EC1BB00A0897A /* Assets.xcassets */; };
 		1DEDA4AF2B3EC1BB00A0897A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4AD2B3EC1BB00A0897A /* LaunchScreen.storyboard */; };
-		1DEDA4BA2B3EC1BB00A0897A /* TestCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4B92B3EC1BB00A0897A /* TestCodeTests.swift */; };
 		1DEDA4C42B3EC1BB00A0897A /* TestCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4C32B3EC1BB00A0897A /* TestCodeUITests.swift */; };
 		1DEDA4C62B3EC1BB00A0897A /* TestCodeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4C52B3EC1BB00A0897A /* TestCodeUITestsLaunchTests.swift */; };
+		1DEDA4DC2B3ECA3C00A0897A /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4D82B3ECA3C00A0897A /* Montserrat-Medium.ttf */; };
+		1DEDA4DD2B3ECA3C00A0897A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4D92B3ECA3C00A0897A /* Montserrat-Bold.ttf */; };
+		1DEDA4DE2B3ECA3C00A0897A /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4DA2B3ECA3C00A0897A /* Montserrat-SemiBold.ttf */; };
+		1DEDA4DF2B3ECA3C00A0897A /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4DB2B3ECA3C00A0897A /* Montserrat-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +48,13 @@
 		1DEDA4AE2B3EC1BB00A0897A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DEDA4B02B3EC1BB00A0897A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DEDA4B52B3EC1BB00A0897A /* TestCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DEDA4B92B3EC1BB00A0897A /* TestCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCodeTests.swift; sourceTree = "<group>"; };
 		1DEDA4BF2B3EC1BB00A0897A /* TestCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEDA4C32B3EC1BB00A0897A /* TestCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCodeUITests.swift; sourceTree = "<group>"; };
 		1DEDA4C52B3EC1BB00A0897A /* TestCodeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCodeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1DEDA4D82B3ECA3C00A0897A /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		1DEDA4D92B3ECA3C00A0897A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		1DEDA4DA2B3ECA3C00A0897A /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		1DEDA4DB2B3ECA3C00A0897A /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +105,15 @@
 		1DEDA4A12B3EC1BA00A0897A /* TestCode */ = {
 			isa = PBXGroup;
 			children = (
+				1DEDA4D62B3ECA0000A0897A /* Resources */,
+				1DEDA4D52B3EC9F900A0897A /* Features */,
+				1DEDA4D42B3EC9ED00A0897A /* UIComponents */,
+				1DEDA4D32B3EC9E600A0897A /* Core */,
 				1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */,
 				1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */,
 				1DEDA4A62B3EC1BA00A0897A /* ViewController.swift */,
 				1DEDA4A82B3EC1BA00A0897A /* Main.storyboard */,
-				1DEDA4AB2B3EC1BB00A0897A /* Assets.xcassets */,
 				1DEDA4AD2B3EC1BB00A0897A /* LaunchScreen.storyboard */,
-				1DEDA4B02B3EC1BB00A0897A /* Info.plist */,
 			);
 			path = TestCode;
 			sourceTree = "<group>";
@@ -113,7 +121,7 @@
 		1DEDA4B82B3EC1BB00A0897A /* TestCodeTests */ = {
 			isa = PBXGroup;
 			children = (
-				1DEDA4B92B3EC1BB00A0897A /* TestCodeTests.swift */,
+				1DEDA4D22B3EC9CA00A0897A /* ViewModel */,
 			);
 			path = TestCodeTests;
 			sourceTree = "<group>";
@@ -125,6 +133,55 @@
 				1DEDA4C52B3EC1BB00A0897A /* TestCodeUITestsLaunchTests.swift */,
 			);
 			path = TestCodeUITests;
+			sourceTree = "<group>";
+		};
+		1DEDA4D22B3EC9CA00A0897A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1DEDA4D32B3EC9E600A0897A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1DEDA4D42B3EC9ED00A0897A /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		1DEDA4D52B3EC9F900A0897A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		1DEDA4D62B3ECA0000A0897A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1DEDA4B02B3EC1BB00A0897A /* Info.plist */,
+				1DEDA4D72B3ECA3C00A0897A /* Fonts */,
+				1DEDA4AB2B3EC1BB00A0897A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1DEDA4D72B3ECA3C00A0897A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1DEDA4D82B3ECA3C00A0897A /* Montserrat-Medium.ttf */,
+				1DEDA4D92B3ECA3C00A0897A /* Montserrat-Bold.ttf */,
+				1DEDA4DA2B3ECA3C00A0897A /* Montserrat-SemiBold.ttf */,
+				1DEDA4DB2B3ECA3C00A0897A /* Montserrat-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +288,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DEDA4DE2B3ECA3C00A0897A /* Montserrat-SemiBold.ttf in Resources */,
+				1DEDA4DD2B3ECA3C00A0897A /* Montserrat-Bold.ttf in Resources */,
+				1DEDA4DF2B3ECA3C00A0897A /* Montserrat-Regular.ttf in Resources */,
 				1DEDA4AF2B3EC1BB00A0897A /* LaunchScreen.storyboard in Resources */,
 				1DEDA4AC2B3EC1BB00A0897A /* Assets.xcassets in Resources */,
+				1DEDA4DC2B3ECA3C00A0897A /* Montserrat-Medium.ttf in Resources */,
 				1DEDA4AA2B3EC1BA00A0897A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +329,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DEDA4BA2B3EC1BB00A0897A /* TestCodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +499,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8PLK35ZR99;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TestCode/Info.plist;
+				INFOPLIST_FILE = TestCode/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -467,7 +527,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8PLK35ZR99;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TestCode/Info.plist;
+				INFOPLIST_FILE = TestCode/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
