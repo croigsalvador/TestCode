@@ -19,6 +19,10 @@
 		1DEDA4DD2B3ECA3C00A0897A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4D92B3ECA3C00A0897A /* Montserrat-Bold.ttf */; };
 		1DEDA4DE2B3ECA3C00A0897A /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4DA2B3ECA3C00A0897A /* Montserrat-SemiBold.ttf */; };
 		1DEDA4DF2B3ECA3C00A0897A /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4DB2B3ECA3C00A0897A /* Montserrat-Regular.ttf */; };
+		1DEDA4E32B3ED57F00A0897A /* TripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4E22B3ED57E00A0897A /* TripListViewModel.swift */; };
+		1DEDA4E52B3ED5C000A0897A /* TripListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4E42B3ED5C000A0897A /* TripListViewModelTests.swift */; };
+		1DEDA4E92B3ED65F00A0897A /* TripListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4E82B3ED65F00A0897A /* TripListViewState.swift */; };
+		1DEDA4EC2B3ED70A00A0897A /* TripListViewStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4EB2B3ED70A00A0897A /* TripListViewStateMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		1DEDA4D92B3ECA3C00A0897A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		1DEDA4DA2B3ECA3C00A0897A /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		1DEDA4DB2B3ECA3C00A0897A /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		1DEDA4E22B3ED57E00A0897A /* TripListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewModel.swift; sourceTree = "<group>"; };
+		1DEDA4E42B3ED5C000A0897A /* TripListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewModelTests.swift; sourceTree = "<group>"; };
+		1DEDA4E82B3ED65F00A0897A /* TripListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewState.swift; sourceTree = "<group>"; };
+		1DEDA4EB2B3ED70A00A0897A /* TripListViewStateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewStateMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				1DEDA4D62B3ECA0000A0897A /* Resources */,
-				1DEDA4D52B3EC9F900A0897A /* Features */,
-				1DEDA4D42B3EC9ED00A0897A /* UIComponents */,
 				1DEDA4D32B3EC9E600A0897A /* Core */,
+				1DEDA4D42B3EC9ED00A0897A /* UIComponents */,
+				1DEDA4D52B3EC9F900A0897A /* Features */,
 				1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */,
 				1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */,
 				1DEDA4A62B3EC1BA00A0897A /* ViewController.swift */,
@@ -138,6 +146,8 @@
 		1DEDA4D22B3EC9CA00A0897A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1DEDA4EA2B3ED6FC00A0897A /* Mock */,
+				1DEDA4E42B3ED5C000A0897A /* TripListViewModelTests.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -159,6 +169,7 @@
 		1DEDA4D52B3EC9F900A0897A /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				1DEDA4E02B3ED55800A0897A /* TripList */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -182,6 +193,47 @@
 				1DEDA4DB2B3ECA3C00A0897A /* Montserrat-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1DEDA4E02B3ED55800A0897A /* TripList */ = {
+			isa = PBXGroup;
+			children = (
+				1DEDA4E12B3ED56200A0897A /* Presentation */,
+			);
+			path = TripList;
+			sourceTree = "<group>";
+		};
+		1DEDA4E12B3ED56200A0897A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1DEDA4E72B3ED64C00A0897A /* Model */,
+				1DEDA4E62B3ED64300A0897A /* UI */,
+				1DEDA4E22B3ED57E00A0897A /* TripListViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1DEDA4E62B3ED64300A0897A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1DEDA4E82B3ED65F00A0897A /* TripListViewState.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1DEDA4E72B3ED64C00A0897A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DEDA4EA2B3ED6FC00A0897A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				1DEDA4EB2B3ED70A00A0897A /* TripListViewStateMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +307,7 @@
 					};
 					1DEDA4B42B3EC1BB00A0897A = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 						TestTargetID = 1DEDA49E2B3EC1BA00A0897A;
 					};
 					1DEDA4BE2B3EC1BB00A0897A = {
@@ -320,7 +373,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */,
+				1DEDA4E32B3ED57F00A0897A /* TripListViewModel.swift in Sources */,
 				1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */,
+				1DEDA4E92B3ED65F00A0897A /* TripListViewState.swift in Sources */,
 				1DEDA4A52B3EC1BA00A0897A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +384,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DEDA4E52B3ED5C000A0897A /* TripListViewModelTests.swift in Sources */,
+				1DEDA4EC2B3ED70A00A0897A /* TripListViewStateMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +608,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8PLK35ZR99;
@@ -560,6 +618,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlos.code.TestCodeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestCode.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestCode";
@@ -571,6 +630,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8PLK35ZR99;
