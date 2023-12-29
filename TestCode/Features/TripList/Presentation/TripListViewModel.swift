@@ -33,7 +33,7 @@ final class TripListViewModel: ObservableObject {
                     self?.viewState.listState = .error
                 }
             } receiveValue: { [weak self] trips in
-                self?.viewState.listState = .loaded
+                self?.viewState.listState = .loaded(trips.map{TripUIModel(trip: $0)})
             }.store(in: &cancellables)
     }
     

@@ -9,9 +9,23 @@ import Foundation
 
 enum TripListState {
     case idle
+    case empty
     case loading
-    case loaded
+    case loaded([TripUIModel])
     case error
+}
+
+extension TripListState: Equatable {
+    static func ==(lhs: TripListState, rhs: TripListState) -> Bool {
+        switch (lhs, rhs) {
+        case (.loading, .loading): return true
+        case (.idle, .idle): return true
+        case (.empty, .empty): return true
+        case (.error, .error): return true
+        default:
+            return false
+        }
+    }
 }
 
 class TripListViewState: ObservableObject {

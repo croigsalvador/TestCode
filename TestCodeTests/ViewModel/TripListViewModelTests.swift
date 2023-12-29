@@ -46,7 +46,9 @@ final class TripListViewModelTests: XCTestCase {
         fetchTripsMock.publisher = .just(tripsMock).eraseToAnyPublisher()
         
         viewStateMock.$listState.dropFirst(2).sink { state in
-            XCTAssertTrue(state == .loaded)
+            if case .loaded(let trips) = state {
+                XCTAssertTrue(!trips.isEmpty)
+            } 
             expectation.fulfill()
         }.store(in: &cancellables)
         
