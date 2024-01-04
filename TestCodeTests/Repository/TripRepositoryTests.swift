@@ -27,7 +27,6 @@ final class TripRepositoryTests: XCTestCase {
     var tripApiMock: TripApiModel {
         return TripApiModel(id: 213, driverName: "Test", description: "This is a test model", startTime: "", endTime: "", address: "", point: PointApiMpodel(latitude: 12.2, longitude: 23.9))
     }
-    
 
     func testFetchTripsSuccess() {
         let expectation = XCTestExpectation(description: "Fetch trips successfully")
@@ -57,7 +56,6 @@ final class TripRepositoryTests: XCTestCase {
 
         wait(for: [expectation], timeout: 1.0)
     }
-    
     
     func testFetchTripsFailWithWrongDates() {
         let expectation = XCTestExpectation(description: "Fetch trips fails")
@@ -101,5 +99,4 @@ final class TripRepositoryTests: XCTestCase {
 
         wait(for: [expectation], timeout: 1.0)
     }
-
 }
