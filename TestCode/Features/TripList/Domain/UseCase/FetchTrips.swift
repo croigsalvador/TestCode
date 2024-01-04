@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 protocol FetchTrips {
-    func fetchTrips() -> AnyPublisher<[Trip], Error>    
+    func fetchTrips() -> AnyPublisher<[Trip], BasicError>    
 }

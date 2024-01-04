@@ -27,10 +27,12 @@ final class TripListViewModelTests: XCTestCase {
     }
     
     var tripsMock: [Trip] {
-        return [Trip(tripId: 123, driverName: "Juan", description: "test", endTime: "2018-12-18T09:00:00.000Z", startTime: "2018-12-18T08:00:00.000Z", address: "Santa maria di popolo", point: Point(latitude: 23, longitude: 23))]
+        return [Trip(id: 123, driverName: "Juan", description: "test", startDate: "2018-12-18T08:00:00.000Z".toDate(), endDate: "2018-12-18T09:00:00.000Z".toDate(), address: "Santa maria di popolo", point: Point(latitude: 23, longitude: 23))]
     }
     
     func test_viewStateShouldStartLoading() throws {
+        
+        fetchTripsMock.publisher = .just(tripsMock).eraseToAnyPublisher()
         
         viewStateMock.$listState.dropFirst().sink { state in
             XCTAssertTrue(state == .loading)

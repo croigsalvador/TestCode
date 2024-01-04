@@ -11,9 +11,9 @@ import Combine
 
 class FetchTripsMock: FetchTrips {
     
-    var publisher: AnyPublisher<[Trip], Error>!
+    var publisher: AnyPublisher<[Trip], BasicError>!
     
-    func fetchTrips() -> AnyPublisher<[Trip], Error> {
+    func fetchTrips() -> AnyPublisher<[Trip], BasicError> {
         return publisher
     }
     

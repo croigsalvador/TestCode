@@ -8,17 +8,16 @@
 import Foundation
 
 struct Trip {
-    let tripId: Int
+    let id: Int
     let driverName: String
     let description: String
-    let endTime: String
-    let startTime: String
+    let startDate: Date?
+    let endDate: Date?
     let address: String
     let point: Point
-    
 }
 
-struct Point: Codable {
+struct Point {
     let latitude: Double
     let longitude: Double
 }
