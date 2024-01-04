@@ -8,16 +8,13 @@
 import Foundation
 
 struct Trip {
-    let id: Int
     let driverName: String
-    let description: String
-    let startDate: Date?
-    let endDate: Date?
-    let address: String
-    let point: Point
-}
-
-struct Point {
-    let latitude: Double
-    let longitude: Double
+    let status: String
+    let route: String
+    let startTime: Date?
+    let endTime: Date?
+    let origin: Location
+    let destination: Location
+    let stops: [Stop]?
+    let description: String?
 }

@@ -13,7 +13,6 @@ import Dip
 class ApplicationCoordinator: ObservableObject, Coordinator {
     
     let window: UIWindow
-    let container: DependencyContainer = DependencyContainer()
   
     init(window: UIWindow) {
         self.window = window

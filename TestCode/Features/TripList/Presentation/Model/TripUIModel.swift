@@ -15,11 +15,11 @@ class TripUIModel: Identifiable {
         self.trip = trip
     }
     
-    var id: Int {
-        trip.id
+    var id: String {
+        trip.route
     }
     
-    var title: String {
+    var title: String? {
         trip.description
     }
 }

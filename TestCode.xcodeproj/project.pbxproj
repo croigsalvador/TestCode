@@ -32,6 +32,14 @@
 		1DCA7D0E2B472B2C0044DC0B /* TripElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D0D2B472B2C0044DC0B /* TripElementView.swift */; };
 		1DCA7D112B47536A0044DC0B /* TripListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D102B47536A0044DC0B /* TripListCoordinator.swift */; };
 		1DCA7D142B47551E0044DC0B /* TripListCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D132B47551E0044DC0B /* TripListCoordinatorTests.swift */; };
+		1DCA7D182B4759B30044DC0B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D172B4759B30044DC0B /* Location.swift */; };
+		1DCA7D1A2B4759B80044DC0B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D192B4759B80044DC0B /* Point.swift */; };
+		1DCA7D1C2B4759BD0044DC0B /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D1B2B4759BD0044DC0B /* Stop.swift */; };
+		1DCA7D1E2B475D090044DC0B /* LocationApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D1D2B475D090044DC0B /* LocationApiModel.swift */; };
+		1DCA7D202B475D150044DC0B /* StopApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D1F2B475D150044DC0B /* StopApiModel.swift */; };
+		1DCA7D222B475D310044DC0B /* PointApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D212B475D310044DC0B /* PointApiModel.swift */; };
+		1DCA7D242B475E350044DC0B /* TripApiModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D232B475E350044DC0B /* TripApiModelMock.swift */; };
+		1DCA7D262B475F220044DC0B /* TripMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D252B475F220044DC0B /* TripMock.swift */; };
 		1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */; };
 		1DEDA4A52B3EC1BA00A0897A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */; };
 		1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A62B3EC1BA00A0897A /* ViewController.swift */; };
@@ -92,6 +100,14 @@
 		1DCA7D0D2B472B2C0044DC0B /* TripElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripElementView.swift; sourceTree = "<group>"; };
 		1DCA7D102B47536A0044DC0B /* TripListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListCoordinator.swift; sourceTree = "<group>"; };
 		1DCA7D132B47551E0044DC0B /* TripListCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListCoordinatorTests.swift; sourceTree = "<group>"; };
+		1DCA7D172B4759B30044DC0B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		1DCA7D192B4759B80044DC0B /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		1DCA7D1B2B4759BD0044DC0B /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		1DCA7D1D2B475D090044DC0B /* LocationApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationApiModel.swift; sourceTree = "<group>"; };
+		1DCA7D1F2B475D150044DC0B /* StopApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopApiModel.swift; sourceTree = "<group>"; };
+		1DCA7D212B475D310044DC0B /* PointApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointApiModel.swift; sourceTree = "<group>"; };
+		1DCA7D232B475E350044DC0B /* TripApiModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripApiModelMock.swift; sourceTree = "<group>"; };
+		1DCA7D252B475F220044DC0B /* TripMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMock.swift; sourceTree = "<group>"; };
 		1DEDA49F2B3EC1BA00A0897A /* TestCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				1DCA7CDC2B46D7ED0044DC0B /* TripNetworkProviderMock.swift */,
+				1DCA7D232B475E350044DC0B /* TripApiModelMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -189,6 +206,9 @@
 			isa = PBXGroup;
 			children = (
 				1DCA7CE32B46D8640044DC0B /* TripApiModel.swift */,
+				1DCA7D1D2B475D090044DC0B /* LocationApiModel.swift */,
+				1DCA7D1F2B475D150044DC0B /* StopApiModel.swift */,
+				1DCA7D212B475D310044DC0B /* PointApiModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +302,16 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		1DCA7D162B4757500044DC0B /* TripList */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA7D122B4755020044DC0B /* Coordinator */,
+				1DCA7CDA2B46D7AD0044DC0B /* Repository */,
+				1DEDA4D22B3EC9CA00A0897A /* ViewModel */,
+			);
+			path = TripList;
+			sourceTree = "<group>";
+		};
 		1DEDA4962B3EC1BA00A0897A = {
 			isa = PBXGroup;
 			children = (
@@ -321,9 +351,7 @@
 		1DEDA4B82B3EC1BB00A0897A /* TestCodeTests */ = {
 			isa = PBXGroup;
 			children = (
-				1DCA7D122B4755020044DC0B /* Coordinator */,
-				1DCA7CDA2B46D7AD0044DC0B /* Repository */,
-				1DEDA4D22B3EC9CA00A0897A /* ViewModel */,
+				1DCA7D162B4757500044DC0B /* TripList */,
 			);
 			path = TestCodeTests;
 			sourceTree = "<group>";
@@ -439,6 +467,7 @@
 			isa = PBXGroup;
 			children = (
 				1DEDA4F42B3EDE5C00A0897A /* FetchTripsMock.swift */,
+				1DCA7D252B475F220044DC0B /* TripMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -466,6 +495,9 @@
 			isa = PBXGroup;
 			children = (
 				1DEDA4F22B3EDE1100A0897A /* Trip.swift */,
+				1DCA7D172B4759B30044DC0B /* Location.swift */,
+				1DCA7D192B4759B80044DC0B /* Point.swift */,
+				1DCA7D1B2B4759BD0044DC0B /* Stop.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -626,6 +658,7 @@
 				1DCA7D042B4726AD0044DC0B /* DeveloperInstances.swift in Sources */,
 				1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */,
 				1DCA7D012B4726780044DC0B /* TripListView.swift in Sources */,
+				1DCA7D182B4759B30044DC0B /* Location.swift in Sources */,
 				1DCA7CF12B4723940044DC0B /* TripRouter.swift in Sources */,
 				1DCA7CF32B4724190044DC0B /* TripNetworkProviderImpl.swift in Sources */,
 				1DEDA4E32B3ED57F00A0897A /* TripListViewModel.swift in Sources */,
@@ -634,18 +667,23 @@
 				1DCA7CE42B46D8640044DC0B /* TripApiModel.swift in Sources */,
 				1DCA7D0C2B472A310044DC0B /* ErrorView.swift in Sources */,
 				1DCA7CE12B46D8300044DC0B /* TripNetworkProvider.swift in Sources */,
+				1DCA7D1C2B4759BD0044DC0B /* Stop.swift in Sources */,
 				1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */,
 				1DCA7D112B47536A0044DC0B /* TripListCoordinator.swift in Sources */,
 				1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */,
+				1DCA7D202B475D150044DC0B /* StopApiModel.swift in Sources */,
 				1DCA7CFC2B47259E0044DC0B /* CustomHostingController.swift in Sources */,
 				1DEDA4E92B3ED65F00A0897A /* TripListViewState.swift in Sources */,
+				1DCA7D1E2B475D090044DC0B /* LocationApiModel.swift in Sources */,
 				1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */,
 				1DCA7CE82B46D92D0044DC0B /* TripRepositoryImpl.swift in Sources */,
 				1DCA7D0B2B472A310044DC0B /* CustomProgressView.swift in Sources */,
 				1DCA7D062B4729E40044DC0B /* TripListFactoryView.swift in Sources */,
 				1DCA7CF92B47257C0044DC0B /* ApplicationCoordinator.swift in Sources */,
 				1DCA7CED2B471DFD0044DC0B /* String+Date.swift in Sources */,
+				1DCA7D1A2B4759B80044DC0B /* Point.swift in Sources */,
 				1DEDA4A52B3EC1BA00A0897A /* SceneDelegate.swift in Sources */,
+				1DCA7D222B475D310044DC0B /* PointApiModel.swift in Sources */,
 				1DEDA4F32B3EDE1100A0897A /* Trip.swift in Sources */,
 				1DEDA4F12B3EDDC500A0897A /* FetchTrips.swift in Sources */,
 			);
@@ -656,8 +694,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DEDA4E52B3ED5C000A0897A /* TripListViewModelTests.swift in Sources */,
+				1DCA7D242B475E350044DC0B /* TripApiModelMock.swift in Sources */,
 				1DCA7CDD2B46D7ED0044DC0B /* TripNetworkProviderMock.swift in Sources */,
 				1DCA7CE62B46D8D80044DC0B /* TripRepositoryTests.swift in Sources */,
+				1DCA7D262B475F220044DC0B /* TripMock.swift in Sources */,
 				1DEDA4F52B3EDE5C00A0897A /* FetchTripsMock.swift in Sources */,
 				1DCA7D142B47551E0044DC0B /* TripListCoordinatorTests.swift in Sources */,
 			);

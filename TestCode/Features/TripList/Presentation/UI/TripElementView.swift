@@ -12,7 +12,7 @@ struct TripElementView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            Text(uiModel.title)
+            Text(uiModel.title ?? "title")
         }
     }
 }

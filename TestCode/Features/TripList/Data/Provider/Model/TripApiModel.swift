@@ -8,28 +8,35 @@
 import Foundation
 
 struct TripApiModel: Codable {
-    let id: Int
+    
     let driverName: String
-    let description: String
+    let status: String
+    let route: String
     let startTime: String
     let endTime: String
-    let address: String
-    let point: PointApiMpodel
+    let origin: LocationApiModel
+    let destination: LocationApiModel
+    let stops: [StopApiModel]?
+    let description: String?
     
-}
-
-struct PointApiMpodel: Codable {
-    let latitude: Double
-    let longitude: Double
-}
-
-extension TripApiModel {
     func toDomainModel() -> Trip? {
         
         guard let startDate = startTime.toDate(),
-            let endDate = endTime.toDate()
+              let endDate = endTime.toDate()
         else { return nil }
-              
-        return Trip(id: self.id, driverName: self.driverName, description: self.description, startDate: startDate, endDate: endDate, address: self.address, point: Point(latitude: point.latitude, longitude: point.longitude))
+        
+        return Trip(
+            driverName: driverName,
+            status: status,
+            route: route,
+            startTime: startDate,
+            endTime: endDate,
+            origin: origin.toDomainModel(),
+            destination: destination.toDomainModel(),
+            stops: stops.map { $0.compactMap { $0.toDomainModel()} },
+            description: description)
     }
 }
+
+
+

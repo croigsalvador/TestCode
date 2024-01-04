@@ -25,7 +25,7 @@ final class TripListViewModelTests: XCTestCase {
     }
     
     var tripsMock: [Trip] {
-        return [Trip(id: 123, driverName: "Juan", description: "test", startDate: "2018-12-18T08:00:00.000Z".toDate(), endDate: "2018-12-18T09:00:00.000Z".toDate(), address: "Santa maria di popolo", point: Point(latitude: 23, longitude: 23))]
+        return [Trip.mock]
     }
     
     func test_viewStateShouldStartLoading() throws {

@@ -24,16 +24,14 @@ final class TripRepositoryTests: XCTestCase {
         sut = nil
     }
     
-    var tripApiMock: TripApiModel {
-        return TripApiModel(id: 213, driverName: "Test", description: "This is a test model", startTime: "", endTime: "", address: "", point: PointApiMpodel(latitude: 12.2, longitude: 23.9))
-    }
 
     func test_fetchTripsShouldSuccess() {
         let expectation = XCTestExpectation(description: "Fetch trips successfully")
         
-        let tripWithDate = TripApiModel(id: 21223, driverName: "Test", description: "This is a test model", startTime: "2018-12-18T08:00:00.000Z", endTime: "2018-12-18T09:00:00.000Z", address: "", point: PointApiMpodel(latitude: 12.2, longitude: 23.9))
+        let tripWithWrongDate = TripApiModel.wrongDateMock
+        let tripApiMock = TripApiModel.mock
         
-        providerMock.publisher = Just([tripApiMock, tripWithDate]).setFailureType(to:  Error.self).eraseToAnyPublisher()
+        providerMock.publisher = Just([tripWithWrongDate, tripApiMock]).setFailureType(to:  Error.self).eraseToAnyPublisher()
 
         let result = sut.fetchTrips()
 
@@ -46,7 +44,7 @@ final class TripRepositoryTests: XCTestCase {
             }
         }, receiveValue: { trips in
             if let trip = trips.first {
-                XCTAssertEqual(trip.id, tripWithDate.id)
+                XCTAssertEqual(trip.route, tripApiMock.route)
             } else {
                 XCTFail("Expected successful trip fetch")
             }
@@ -59,8 +57,9 @@ final class TripRepositoryTests: XCTestCase {
     
     func test_fetchTripsShouldFailWithWrongDates() {
         let expectation = XCTestExpectation(description: "Fetch trips fails")
+        let tripWithWrongDate = TripApiModel.wrongDateMock
 
-        providerMock.publisher = Just([tripApiMock]).setFailureType(to:  Error.self).eraseToAnyPublisher()
+        providerMock.publisher = Just([tripWithWrongDate]).setFailureType(to:  Error.self).eraseToAnyPublisher()
 
         let result = sut.fetchTrips()
 
