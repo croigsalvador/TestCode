@@ -17,7 +17,7 @@ struct TripApiModel: Codable {
     let origin: LocationApiModel
     let destination: LocationApiModel
     let stops: [StopApiModel]?
-    let description: String?
+    let description: String
     
     func toDomainModel() -> Trip? {
         

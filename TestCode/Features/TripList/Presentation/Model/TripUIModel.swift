@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 class TripUIModel: Identifiable {
     
     let trip: Trip
@@ -19,7 +20,19 @@ class TripUIModel: Identifiable {
         trip.route
     }
     
-    var title: String? {
+    var title: String {
         trip.description
+    }
+    
+    var status: TripStatus {
+        TripStatus(rawValue: trip.status) ?? .cancelled
+    }
+    
+    var startTime: String {
+        trip.startTime.hourDate
+    }
+    
+    var endTime: String {
+        trip.endTime.hourDate
     }
 }

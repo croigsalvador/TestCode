@@ -40,6 +40,15 @@
 		1DCA7D222B475D310044DC0B /* PointApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D212B475D310044DC0B /* PointApiModel.swift */; };
 		1DCA7D242B475E350044DC0B /* TripApiModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D232B475E350044DC0B /* TripApiModelMock.swift */; };
 		1DCA7D262B475F220044DC0B /* TripMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D252B475F220044DC0B /* TripMock.swift */; };
+		1DCA7D282B4765C40044DC0B /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D272B4765C40044DC0B /* Date+String.swift */; };
+		1DCA7D2E2B4767250044DC0B /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D2A2B4767250044DC0B /* ColorPalette.swift */; };
+		1DCA7D2F2B4767250044DC0B /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D2C2B4767250044DC0B /* MainTheme.swift */; };
+		1DCA7D302B4767250044DC0B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D2D2B4767250044DC0B /* Theme.swift */; };
+		1DCA7D332B4767E10044DC0B /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D322B4767E10044DC0B /* ViewModifier.swift */; };
+		1DCA7D362B4768C40044DC0B /* TripViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D352B4768C40044DC0B /* TripViewModifier.swift */; };
+		1DCA7D392B4769460044DC0B /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D382B4769460044DC0B /* TagView.swift */; };
+		1DCA7D3B2B4769510044DC0B /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D3A2B4769510044DC0B /* Tag.swift */; };
+		1DCA7D3D2B4769CD0044DC0B /* TripStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D3C2B4769CD0044DC0B /* TripStatus.swift */; };
 		1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */; };
 		1DEDA4A52B3EC1BA00A0897A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */; };
 		1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A62B3EC1BA00A0897A /* ViewController.swift */; };
@@ -108,6 +117,15 @@
 		1DCA7D212B475D310044DC0B /* PointApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointApiModel.swift; sourceTree = "<group>"; };
 		1DCA7D232B475E350044DC0B /* TripApiModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripApiModelMock.swift; sourceTree = "<group>"; };
 		1DCA7D252B475F220044DC0B /* TripMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMock.swift; sourceTree = "<group>"; };
+		1DCA7D272B4765C40044DC0B /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
+		1DCA7D2A2B4767250044DC0B /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		1DCA7D2C2B4767250044DC0B /* MainTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTheme.swift; sourceTree = "<group>"; };
+		1DCA7D2D2B4767250044DC0B /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		1DCA7D322B4767E10044DC0B /* ViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
+		1DCA7D352B4768C40044DC0B /* TripViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModifier.swift; sourceTree = "<group>"; };
+		1DCA7D382B4769460044DC0B /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		1DCA7D3A2B4769510044DC0B /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		1DCA7D3C2B4769CD0044DC0B /* TripStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStatus.swift; sourceTree = "<group>"; };
 		1DEDA49F2B3EC1BA00A0897A /* TestCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +243,7 @@
 		1DCA7CEA2B471CC50044DC0B /* Date */ = {
 			isa = PBXGroup;
 			children = (
+				1DCA7D272B4765C40044DC0B /* Date+String.swift */,
 			);
 			path = Date;
 			sourceTree = "<group>";
@@ -312,6 +331,48 @@
 			path = TripList;
 			sourceTree = "<group>";
 		};
+		1DCA7D292B4767250044DC0B /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA7D2A2B4767250044DC0B /* ColorPalette.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		1DCA7D2B2B4767250044DC0B /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA7D2C2B4767250044DC0B /* MainTheme.swift */,
+				1DCA7D2D2B4767250044DC0B /* Theme.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		1DCA7D312B4767E10044DC0B /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA7D322B4767E10044DC0B /* ViewModifier.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		1DCA7D342B4768BB0044DC0B /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA7D352B4768C40044DC0B /* TripViewModifier.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		1DCA7D372B47693B0044DC0B /* TagView */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA7D382B4769460044DC0B /* TagView.swift */,
+				1DCA7D3A2B4769510044DC0B /* Tag.swift */,
+			);
+			path = TagView;
+			sourceTree = "<group>";
+		};
 		1DEDA4962B3EC1BA00A0897A = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +448,10 @@
 		1DEDA4D42B3EC9ED00A0897A /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				1DCA7D372B47693B0044DC0B /* TagView */,
+				1DCA7D312B4767E10044DC0B /* ViewModifier */,
+				1DCA7D292B4767250044DC0B /* Color */,
+				1DCA7D2B2B4767250044DC0B /* Themes */,
 				1DCA7D092B472A310044DC0B /* ErrorView */,
 				1DCA7D072B472A300044DC0B /* ProgressView */,
 				1DCA7CFA2B47259E0044DC0B /* HostingController */,
@@ -436,6 +501,7 @@
 		1DEDA4E12B3ED56200A0897A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1DCA7D342B4768BB0044DC0B /* ViewModifier */,
 				1DCA7D0F2B47535C0044DC0B /* Coordinator */,
 				1DEDA4E72B3ED64C00A0897A /* Model */,
 				1DEDA4E62B3ED64300A0897A /* UI */,
@@ -459,6 +525,7 @@
 			isa = PBXGroup;
 			children = (
 				1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */,
+				1DCA7D3C2B4769CD0044DC0B /* TripStatus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -655,6 +722,7 @@
 				1DCA7CD52B3EE5890044DC0B /* TripUIModel.swift in Sources */,
 				1DCA7D0E2B472B2C0044DC0B /* TripElementView.swift in Sources */,
 				1DCA7CD92B46D7310044DC0B /* FetchTripsImpl.swift in Sources */,
+				1DCA7D3D2B4769CD0044DC0B /* TripStatus.swift in Sources */,
 				1DCA7D042B4726AD0044DC0B /* DeveloperInstances.swift in Sources */,
 				1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */,
 				1DCA7D012B4726780044DC0B /* TripListView.swift in Sources */,
@@ -663,7 +731,9 @@
 				1DCA7CF32B4724190044DC0B /* TripNetworkProviderImpl.swift in Sources */,
 				1DEDA4E32B3ED57F00A0897A /* TripListViewModel.swift in Sources */,
 				1DCA7CF72B4725670044DC0B /* Coordinator.swift in Sources */,
+				1DCA7D2E2B4767250044DC0B /* ColorPalette.swift in Sources */,
 				1DEDA4F82B3EE21A00A0897A /* Publisher+Utils.swift in Sources */,
+				1DCA7D302B4767250044DC0B /* Theme.swift in Sources */,
 				1DCA7CE42B46D8640044DC0B /* TripApiModel.swift in Sources */,
 				1DCA7D0C2B472A310044DC0B /* ErrorView.swift in Sources */,
 				1DCA7CE12B46D8300044DC0B /* TripNetworkProvider.swift in Sources */,
@@ -674,13 +744,19 @@
 				1DCA7D202B475D150044DC0B /* StopApiModel.swift in Sources */,
 				1DCA7CFC2B47259E0044DC0B /* CustomHostingController.swift in Sources */,
 				1DEDA4E92B3ED65F00A0897A /* TripListViewState.swift in Sources */,
+				1DCA7D3B2B4769510044DC0B /* Tag.swift in Sources */,
 				1DCA7D1E2B475D090044DC0B /* LocationApiModel.swift in Sources */,
 				1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */,
 				1DCA7CE82B46D92D0044DC0B /* TripRepositoryImpl.swift in Sources */,
 				1DCA7D0B2B472A310044DC0B /* CustomProgressView.swift in Sources */,
+				1DCA7D332B4767E10044DC0B /* ViewModifier.swift in Sources */,
 				1DCA7D062B4729E40044DC0B /* TripListFactoryView.swift in Sources */,
 				1DCA7CF92B47257C0044DC0B /* ApplicationCoordinator.swift in Sources */,
+				1DCA7D282B4765C40044DC0B /* Date+String.swift in Sources */,
+				1DCA7D2F2B4767250044DC0B /* MainTheme.swift in Sources */,
 				1DCA7CED2B471DFD0044DC0B /* String+Date.swift in Sources */,
+				1DCA7D392B4769460044DC0B /* TagView.swift in Sources */,
+				1DCA7D362B4768C40044DC0B /* TripViewModifier.swift in Sources */,
 				1DCA7D1A2B4759B80044DC0B /* Point.swift in Sources */,
 				1DEDA4A52B3EC1BA00A0897A /* SceneDelegate.swift in Sources */,
 				1DCA7D222B475D310044DC0B /* PointApiModel.swift in Sources */,
