@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TripApiModel {
+struct TripApiModel: Codable {
     let id: Int
     let driverName: String
     let description: String

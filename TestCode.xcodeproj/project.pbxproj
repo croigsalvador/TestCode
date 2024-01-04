@@ -18,6 +18,8 @@
 		1DCA7CE82B46D92D0044DC0B /* TripRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CE72B46D92D0044DC0B /* TripRepositoryImpl.swift */; };
 		1DCA7CED2B471DFD0044DC0B /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CEC2B471DFD0044DC0B /* String+Date.swift */; };
 		1DCA7CEF2B4720F60044DC0B /* TestCoideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CEE2B4720F60044DC0B /* TestCoideUITests.swift */; };
+		1DCA7CF12B4723940044DC0B /* TripRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CF02B4723940044DC0B /* TripRouter.swift */; };
+		1DCA7CF32B4724190044DC0B /* TripNetworkProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CF22B4724190044DC0B /* TripNetworkProviderImpl.swift */; };
 		1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */; };
 		1DEDA4A52B3EC1BA00A0897A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */; };
 		1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A62B3EC1BA00A0897A /* ViewController.swift */; };
@@ -67,6 +69,8 @@
 		1DCA7CE72B46D92D0044DC0B /* TripRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepositoryImpl.swift; sourceTree = "<group>"; };
 		1DCA7CEC2B471DFD0044DC0B /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		1DCA7CEE2B4720F60044DC0B /* TestCoideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoideUITests.swift; sourceTree = "<group>"; };
+		1DCA7CF02B4723940044DC0B /* TripRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRouter.swift; sourceTree = "<group>"; };
+		1DCA7CF22B4724190044DC0B /* TripNetworkProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNetworkProviderImpl.swift; sourceTree = "<group>"; };
 		1DEDA49F2B3EC1BA00A0897A /* TestCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				1DCA7CE22B46D8580044DC0B /* Model */,
+				1DCA7CF42B47245E0044DC0B /* Router */,
+				1DCA7CF22B4724190044DC0B /* TripNetworkProviderImpl.swift */,
 				1DCA7CE02B46D8300044DC0B /* TripNetworkProvider.swift */,
 			);
 			path = Provider;
@@ -189,6 +195,14 @@
 				1DCA7CEC2B471DFD0044DC0B /* String+Date.swift */,
 			);
 			path = String;
+			sourceTree = "<group>";
+		};
+		1DCA7CF42B47245E0044DC0B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA7CF02B4723940044DC0B /* TripRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		1DEDA4962B3EC1BA00A0897A = {
@@ -519,6 +533,8 @@
 				1DCA7CD52B3EE5890044DC0B /* TripUIModel.swift in Sources */,
 				1DCA7CD92B46D7310044DC0B /* FetchTripsImpl.swift in Sources */,
 				1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */,
+				1DCA7CF12B4723940044DC0B /* TripRouter.swift in Sources */,
+				1DCA7CF32B4724190044DC0B /* TripNetworkProviderImpl.swift in Sources */,
 				1DEDA4E32B3ED57F00A0897A /* TripListViewModel.swift in Sources */,
 				1DEDA4F82B3EE21A00A0897A /* Publisher+Utils.swift in Sources */,
 				1DCA7CE42B46D8640044DC0B /* TripApiModel.swift in Sources */,
