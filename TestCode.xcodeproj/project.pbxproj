@@ -20,6 +20,10 @@
 		1DCA7CEF2B4720F60044DC0B /* TestCoideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CEE2B4720F60044DC0B /* TestCoideUITests.swift */; };
 		1DCA7CF12B4723940044DC0B /* TripRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CF02B4723940044DC0B /* TripRouter.swift */; };
 		1DCA7CF32B4724190044DC0B /* TripNetworkProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CF22B4724190044DC0B /* TripNetworkProviderImpl.swift */; };
+		1DCA7CF72B4725670044DC0B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CF62B4725670044DC0B /* Coordinator.swift */; };
+		1DCA7CF92B47257C0044DC0B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CF82B47257C0044DC0B /* ApplicationCoordinator.swift */; };
+		1DCA7CFC2B47259E0044DC0B /* CustomHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CFB2B47259E0044DC0B /* CustomHostingController.swift */; };
+		1DCA7CFF2B4725AD0044DC0B /* Dip in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCA7CFE2B4725AD0044DC0B /* Dip */; };
 		1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */; };
 		1DEDA4A52B3EC1BA00A0897A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */; };
 		1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A62B3EC1BA00A0897A /* ViewController.swift */; };
@@ -71,6 +75,9 @@
 		1DCA7CEE2B4720F60044DC0B /* TestCoideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoideUITests.swift; sourceTree = "<group>"; };
 		1DCA7CF02B4723940044DC0B /* TripRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRouter.swift; sourceTree = "<group>"; };
 		1DCA7CF22B4724190044DC0B /* TripNetworkProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNetworkProviderImpl.swift; sourceTree = "<group>"; };
+		1DCA7CF62B4725670044DC0B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1DCA7CF82B47257C0044DC0B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		1DCA7CFB2B47259E0044DC0B /* CustomHostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHostingController.swift; sourceTree = "<group>"; };
 		1DEDA49F2B3EC1BA00A0897A /* TestCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DCA7CFF2B4725AD0044DC0B /* Dip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +213,23 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		1DCA7CF52B4725370044DC0B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA7CF62B4725670044DC0B /* Coordinator.swift */,
+				1DCA7CF82B47257C0044DC0B /* ApplicationCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1DCA7CFA2B47259E0044DC0B /* HostingController */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA7CFB2B47259E0044DC0B /* CustomHostingController.swift */,
+			);
+			path = HostingController;
+			sourceTree = "<group>";
+		};
 		1DEDA4962B3EC1BA00A0897A = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +296,7 @@
 		1DEDA4D32B3EC9E600A0897A /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1DCA7CF52B4725370044DC0B /* Coordinator */,
 				1DCA7CD12B3EE49E0044DC0B /* Error */,
 				1DEDA4F62B3EE21A00A0897A /* Combine */,
 			);
@@ -280,6 +306,7 @@
 		1DEDA4D42B3EC9ED00A0897A /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				1DCA7CFA2B47259E0044DC0B /* HostingController */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -409,6 +436,9 @@
 			dependencies = (
 			);
 			name = TestCode;
+			packageProductDependencies = (
+				1DCA7CFE2B4725AD0044DC0B /* Dip */,
+			);
 			productName = TestCode;
 			productReference = 1DEDA49F2B3EC1BA00A0897A /* TestCode.app */;
 			productType = "com.apple.product-type.application";
@@ -483,6 +513,9 @@
 				Base,
 			);
 			mainGroup = 1DEDA4962B3EC1BA00A0897A;
+			packageReferences = (
+				1DCA7CFD2B4725AD0044DC0B /* XCRemoteSwiftPackageReference "Dip" */,
+			);
 			productRefGroup = 1DEDA4A02B3EC1BA00A0897A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -536,14 +569,17 @@
 				1DCA7CF12B4723940044DC0B /* TripRouter.swift in Sources */,
 				1DCA7CF32B4724190044DC0B /* TripNetworkProviderImpl.swift in Sources */,
 				1DEDA4E32B3ED57F00A0897A /* TripListViewModel.swift in Sources */,
+				1DCA7CF72B4725670044DC0B /* Coordinator.swift in Sources */,
 				1DEDA4F82B3EE21A00A0897A /* Publisher+Utils.swift in Sources */,
 				1DCA7CE42B46D8640044DC0B /* TripApiModel.swift in Sources */,
 				1DCA7CE12B46D8300044DC0B /* TripNetworkProvider.swift in Sources */,
 				1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */,
 				1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */,
+				1DCA7CFC2B47259E0044DC0B /* CustomHostingController.swift in Sources */,
 				1DEDA4E92B3ED65F00A0897A /* TripListViewState.swift in Sources */,
 				1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */,
 				1DCA7CE82B46D92D0044DC0B /* TripRepositoryImpl.swift in Sources */,
+				1DCA7CF92B47257C0044DC0B /* ApplicationCoordinator.swift in Sources */,
 				1DCA7CED2B471DFD0044DC0B /* String+Date.swift in Sources */,
 				1DEDA4A52B3EC1BA00A0897A /* SceneDelegate.swift in Sources */,
 				1DEDA4F32B3EDE1100A0897A /* Trip.swift in Sources */,
@@ -898,6 +934,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1DCA7CFD2B4725AD0044DC0B /* XCRemoteSwiftPackageReference "Dip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/Dip.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1DCA7CFE2B4725AD0044DC0B /* Dip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DCA7CFD2B4725AD0044DC0B /* XCRemoteSwiftPackageReference "Dip" */;
+			productName = Dip;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1DEDA4972B3EC1BA00A0897A /* Project object */;
 }

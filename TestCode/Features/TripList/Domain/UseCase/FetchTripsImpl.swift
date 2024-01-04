@@ -12,7 +12,7 @@ struct FetchTripsImpl: FetchTrips {
     
     private let repository: TripRepository
     
-    init(_ repository: TripRepository) {
+    init(repository: TripRepository) {
         self.repository = repository
     }
     
