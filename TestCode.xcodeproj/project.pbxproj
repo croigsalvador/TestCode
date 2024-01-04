@@ -26,10 +26,13 @@
 		1DCA7CFF2B4725AD0044DC0B /* Dip in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCA7CFE2B4725AD0044DC0B /* Dip */; };
 		1DCA7D012B4726780044DC0B /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D002B4726780044DC0B /* TripListView.swift */; };
 		1DCA7D042B4726AD0044DC0B /* DeveloperInstances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D032B4726AD0044DC0B /* DeveloperInstances.swift */; };
+		1DCA7D062B4729E40044DC0B /* TripListFactoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D052B4729E40044DC0B /* TripListFactoryView.swift */; };
+		1DCA7D0B2B472A310044DC0B /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D082B472A300044DC0B /* CustomProgressView.swift */; };
+		1DCA7D0C2B472A310044DC0B /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D0A2B472A310044DC0B /* ErrorView.swift */; };
+		1DCA7D0E2B472B2C0044DC0B /* TripElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D0D2B472B2C0044DC0B /* TripElementView.swift */; };
 		1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */; };
 		1DEDA4A52B3EC1BA00A0897A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */; };
 		1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A62B3EC1BA00A0897A /* ViewController.swift */; };
-		1DEDA4AA2B3EC1BA00A0897A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A82B3EC1BA00A0897A /* Main.storyboard */; };
 		1DEDA4AC2B3EC1BB00A0897A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4AB2B3EC1BB00A0897A /* Assets.xcassets */; };
 		1DEDA4AF2B3EC1BB00A0897A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4AD2B3EC1BB00A0897A /* LaunchScreen.storyboard */; };
 		1DEDA4DC2B3ECA3C00A0897A /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4D82B3ECA3C00A0897A /* Montserrat-Medium.ttf */; };
@@ -39,7 +42,6 @@
 		1DEDA4E32B3ED57F00A0897A /* TripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4E22B3ED57E00A0897A /* TripListViewModel.swift */; };
 		1DEDA4E52B3ED5C000A0897A /* TripListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4E42B3ED5C000A0897A /* TripListViewModelTests.swift */; };
 		1DEDA4E92B3ED65F00A0897A /* TripListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4E82B3ED65F00A0897A /* TripListViewState.swift */; };
-		1DEDA4EC2B3ED70A00A0897A /* TripListViewStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4EB2B3ED70A00A0897A /* TripListViewStateMock.swift */; };
 		1DEDA4F12B3EDDC500A0897A /* FetchTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4F02B3EDDC500A0897A /* FetchTrips.swift */; };
 		1DEDA4F32B3EDE1100A0897A /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4F22B3EDE1100A0897A /* Trip.swift */; };
 		1DEDA4F52B3EDE5C00A0897A /* FetchTripsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4F42B3EDE5C00A0897A /* FetchTripsMock.swift */; };
@@ -82,11 +84,14 @@
 		1DCA7CFB2B47259E0044DC0B /* CustomHostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHostingController.swift; sourceTree = "<group>"; };
 		1DCA7D002B4726780044DC0B /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
 		1DCA7D032B4726AD0044DC0B /* DeveloperInstances.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperInstances.swift; sourceTree = "<group>"; };
+		1DCA7D052B4729E40044DC0B /* TripListFactoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListFactoryView.swift; sourceTree = "<group>"; };
+		1DCA7D082B472A300044DC0B /* CustomProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
+		1DCA7D0A2B472A310044DC0B /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		1DCA7D0D2B472B2C0044DC0B /* TripElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripElementView.swift; sourceTree = "<group>"; };
 		1DEDA49F2B3EC1BA00A0897A /* TestCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1DEDA4A62B3EC1BA00A0897A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1DEDA4A92B3EC1BA00A0897A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1DEDA4AB2B3EC1BB00A0897A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DEDA4AE2B3EC1BB00A0897A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DEDA4B02B3EC1BB00A0897A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +104,6 @@
 		1DEDA4E22B3ED57E00A0897A /* TripListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewModel.swift; sourceTree = "<group>"; };
 		1DEDA4E42B3ED5C000A0897A /* TripListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewModelTests.swift; sourceTree = "<group>"; };
 		1DEDA4E82B3ED65F00A0897A /* TripListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewState.swift; sourceTree = "<group>"; };
-		1DEDA4EB2B3ED70A00A0897A /* TripListViewStateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewStateMock.swift; sourceTree = "<group>"; };
 		1DEDA4F02B3EDDC500A0897A /* FetchTrips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTrips.swift; sourceTree = "<group>"; };
 		1DEDA4F22B3EDE1100A0897A /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		1DEDA4F42B3EDE5C00A0897A /* FetchTripsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTripsMock.swift; sourceTree = "<group>"; };
@@ -242,6 +246,22 @@
 			path = Dependencies;
 			sourceTree = "<group>";
 		};
+		1DCA7D072B472A300044DC0B /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA7D082B472A300044DC0B /* CustomProgressView.swift */,
+			);
+			path = ProgressView;
+			sourceTree = "<group>";
+		};
+		1DCA7D092B472A310044DC0B /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA7D0A2B472A310044DC0B /* ErrorView.swift */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
 		1DEDA4962B3EC1BA00A0897A = {
 			isa = PBXGroup;
 			children = (
@@ -265,15 +285,14 @@
 		1DEDA4A12B3EC1BA00A0897A /* TestCode */ = {
 			isa = PBXGroup;
 			children = (
-				1DCA7CE92B471CB90044DC0B /* Foundation */,
 				1DEDA4D62B3ECA0000A0897A /* Resources */,
 				1DEDA4D32B3EC9E600A0897A /* Core */,
+				1DCA7CE92B471CB90044DC0B /* Foundation */,
 				1DEDA4D42B3EC9ED00A0897A /* UIComponents */,
 				1DEDA4D52B3EC9F900A0897A /* Features */,
 				1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */,
 				1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */,
 				1DEDA4A62B3EC1BA00A0897A /* ViewController.swift */,
-				1DEDA4A82B3EC1BA00A0897A /* Main.storyboard */,
 				1DEDA4AD2B3EC1BB00A0897A /* LaunchScreen.storyboard */,
 			);
 			path = TestCode;
@@ -319,6 +338,8 @@
 		1DEDA4D42B3EC9ED00A0897A /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				1DCA7D092B472A310044DC0B /* ErrorView */,
+				1DCA7D072B472A300044DC0B /* ProgressView */,
 				1DCA7CFA2B47259E0044DC0B /* HostingController */,
 			);
 			path = UIComponents;
@@ -378,6 +399,8 @@
 			children = (
 				1DEDA4E82B3ED65F00A0897A /* TripListViewState.swift */,
 				1DCA7D002B4726780044DC0B /* TripListView.swift */,
+				1DCA7D052B4729E40044DC0B /* TripListFactoryView.swift */,
+				1DCA7D0D2B472B2C0044DC0B /* TripElementView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -393,7 +416,6 @@
 		1DEDA4EA2B3ED6FC00A0897A /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				1DEDA4EB2B3ED70A00A0897A /* TripListViewStateMock.swift */,
 				1DEDA4F42B3EDE5C00A0897A /* FetchTripsMock.swift */,
 			);
 			path = Mock;
@@ -552,7 +574,6 @@
 				1DEDA4AF2B3EC1BB00A0897A /* LaunchScreen.storyboard in Resources */,
 				1DEDA4AC2B3EC1BB00A0897A /* Assets.xcassets in Resources */,
 				1DEDA4DC2B3ECA3C00A0897A /* Montserrat-Medium.ttf in Resources */,
-				1DEDA4AA2B3EC1BA00A0897A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +599,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DCA7CD52B3EE5890044DC0B /* TripUIModel.swift in Sources */,
+				1DCA7D0E2B472B2C0044DC0B /* TripElementView.swift in Sources */,
 				1DCA7CD92B46D7310044DC0B /* FetchTripsImpl.swift in Sources */,
 				1DCA7D042B4726AD0044DC0B /* DeveloperInstances.swift in Sources */,
 				1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */,
@@ -588,6 +610,7 @@
 				1DCA7CF72B4725670044DC0B /* Coordinator.swift in Sources */,
 				1DEDA4F82B3EE21A00A0897A /* Publisher+Utils.swift in Sources */,
 				1DCA7CE42B46D8640044DC0B /* TripApiModel.swift in Sources */,
+				1DCA7D0C2B472A310044DC0B /* ErrorView.swift in Sources */,
 				1DCA7CE12B46D8300044DC0B /* TripNetworkProvider.swift in Sources */,
 				1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */,
 				1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */,
@@ -595,6 +618,8 @@
 				1DEDA4E92B3ED65F00A0897A /* TripListViewState.swift in Sources */,
 				1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */,
 				1DCA7CE82B46D92D0044DC0B /* TripRepositoryImpl.swift in Sources */,
+				1DCA7D0B2B472A310044DC0B /* CustomProgressView.swift in Sources */,
+				1DCA7D062B4729E40044DC0B /* TripListFactoryView.swift in Sources */,
 				1DCA7CF92B47257C0044DC0B /* ApplicationCoordinator.swift in Sources */,
 				1DCA7CED2B471DFD0044DC0B /* String+Date.swift in Sources */,
 				1DEDA4A52B3EC1BA00A0897A /* SceneDelegate.swift in Sources */,
@@ -608,7 +633,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DEDA4E52B3ED5C000A0897A /* TripListViewModelTests.swift in Sources */,
-				1DEDA4EC2B3ED70A00A0897A /* TripListViewStateMock.swift in Sources */,
 				1DCA7CDD2B46D7ED0044DC0B /* TripNetworkProviderMock.swift in Sources */,
 				1DCA7CE62B46D8D80044DC0B /* TripRepositoryTests.swift in Sources */,
 				1DEDA4F52B3EDE5C00A0897A /* FetchTripsMock.swift in Sources */,
@@ -639,14 +663,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1DEDA4A82B3EC1BA00A0897A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1DEDA4A92B3EC1BA00A0897A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1DEDA4AD2B3EC1BB00A0897A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -784,7 +800,6 @@
 				INFOPLIST_FILE = TestCode/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -812,7 +827,6 @@
 				INFOPLIST_FILE = TestCode/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

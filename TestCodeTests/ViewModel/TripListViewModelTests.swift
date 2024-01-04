@@ -11,15 +11,13 @@ import Combine
 
 final class TripListViewModelTests: XCTestCase {
     
-    var viewStateMock: TripListViewStateMock!
-    var fetchTripsMock: FetchTripsMock! 
+    var fetchTripsMock: FetchTripsMock!
     var sut: TripListViewModel!
     private var cancellables: Set<AnyCancellable> = []
 
     override func setUpWithError() throws {
-        viewStateMock = TripListViewStateMock()
         fetchTripsMock = FetchTripsMock()
-        sut = TripListViewModel(viewState: viewStateMock, fetchTrips: fetchTripsMock)
+        sut = TripListViewModel(fetchTrips: fetchTripsMock)
     }
 
     override func tearDownWithError() throws {
@@ -34,7 +32,7 @@ final class TripListViewModelTests: XCTestCase {
         
         fetchTripsMock.publisher = .just(tripsMock).eraseToAnyPublisher()
         
-        viewStateMock.$listState.dropFirst().sink { state in
+        sut.$viewState.dropFirst().sink { state in
             XCTAssertTrue(state == .loading)
         }.store(in: &cancellables)
         
@@ -47,7 +45,7 @@ final class TripListViewModelTests: XCTestCase {
         
         fetchTripsMock.publisher = .just(tripsMock).eraseToAnyPublisher()
         
-        viewStateMock.$listState.dropFirst(2).sink { state in
+        sut.$viewState.dropFirst(2).sink { state in
             if case .loaded(let trips) = state {
                 XCTAssertTrue(!trips.isEmpty)
             } 
@@ -65,7 +63,7 @@ final class TripListViewModelTests: XCTestCase {
         
         fetchTripsMock.publisher = .fail(BasicError.unknownError).eraseToAnyPublisher()
         
-        viewStateMock.$listState.dropFirst(2).sink { state in
+        sut.$viewState.dropFirst(2).sink { state in
             XCTAssertTrue(state == .error)
             expectation.fulfill()
         }.store(in: &cancellables)

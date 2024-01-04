@@ -7,12 +7,16 @@
 
 import Foundation
 
-class TripUIModel {
+class TripUIModel: Identifiable {
     
     let trip: Trip
     
     init(trip: Trip) {
         self.trip = trip
+    }
+    
+    var id: Int {
+        trip.id
     }
     
     var title: String {

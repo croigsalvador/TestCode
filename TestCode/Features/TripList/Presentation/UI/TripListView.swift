@@ -12,7 +12,15 @@ struct TripListView: View {
     @ObservedObject var viewModel: TripListViewModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                TripListFactoryView(viewModel: viewModel)
+            }.navigationBarItems(trailing: Button(action:viewModel.add) {
+                Image(systemName: "plus")
+                    .tint(Color.black)
+            }).navigationBarTitle("Trips", displayMode: .inline)
+                .onAppear(perform: viewModel.onAppear)
+        }
     }
 }
 

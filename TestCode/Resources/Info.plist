@@ -4,6 +4,13 @@
 <dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
+		<key>Fonts provided by application</key>
+		<array>
+			<string>Montserrat-Bold.ttf</string>
+			<string>Montserrat-SemiBold.ttf</string>
+			<string>Montserrat-Medium.ttf</string>
+			<string>Montserrat-Regular.ttf</string>
+		</array>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 		<key>UISceneConfigurations</key>
@@ -15,18 +22,9 @@
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
 				</dict>
 			</array>
 		</dict>
-		<key>Fonts provided by application</key>
-		<array>
-			<string>Montserrat-Bold.ttf</string>
-			<string>Montserrat-SemiBold.ttf</string>
-			<string>Montserrat-Medium.ttf</string>
-			<string>Montserrat-Regular.ttf</string>
-		</array>
 	</dict>
 </dict>
 </plist>

@@ -25,7 +25,7 @@ class ApplicationCoordinator: ObservableObject, Coordinator {
             return
         }
         
-        let viewModel = TripListViewModel(viewState: TripListViewState(), fetchTrips: fetchTrips)
+        let viewModel = TripListViewModel(fetchTrips: fetchTrips)
         let view = TripListView(viewModel: viewModel)
         
         let viewController = CustomHostingController(shouldShowNavigationBar: false, rootView: view)

@@ -28,8 +28,3 @@ extension TripListState: Equatable {
     }
 }
 
-class TripListViewState: ObservableObject {
-    
-    @Published var listState: TripListState = .idle 
-    
-}
