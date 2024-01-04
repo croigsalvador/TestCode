@@ -28,7 +28,7 @@ final class TripRepositoryTests: XCTestCase {
         return TripApiModel(id: 213, driverName: "Test", description: "This is a test model", startTime: "", endTime: "", address: "", point: PointApiMpodel(latitude: 12.2, longitude: 23.9))
     }
 
-    func testFetchTripsSuccess() {
+    func test_fetchTripsShouldSuccess() {
         let expectation = XCTestExpectation(description: "Fetch trips successfully")
         
         let tripWithDate = TripApiModel(id: 21223, driverName: "Test", description: "This is a test model", startTime: "2018-12-18T08:00:00.000Z", endTime: "2018-12-18T09:00:00.000Z", address: "", point: PointApiMpodel(latitude: 12.2, longitude: 23.9))
@@ -57,7 +57,7 @@ final class TripRepositoryTests: XCTestCase {
         wait(for: [expectation], timeout: 1.0)
     }
     
-    func testFetchTripsFailWithWrongDates() {
+    func test_fetchTripsShouldFailWithWrongDates() {
         let expectation = XCTestExpectation(description: "Fetch trips fails")
 
         providerMock.publisher = Just([tripApiMock]).setFailureType(to:  Error.self).eraseToAnyPublisher()
@@ -80,7 +80,7 @@ final class TripRepositoryTests: XCTestCase {
         wait(for: [expectation], timeout: 1.0)
     }
     
-    func testFetchWeatherFailure() {
+    func test_fetchTripsShouldFail() {
         let expectation = XCTestExpectation(description: "Fetch trips failure")
 
         providerMock.publisher = Fail(error: BasicError.networkError).eraseToAnyPublisher()
