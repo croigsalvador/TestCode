@@ -11,6 +11,7 @@ import Combine
 final class TripListViewModel: ObservableObject {
     
     @Published var viewState: TripListState
+    @Published var viewMapState: TripMapViewState = TripMapViewState()
     private let fetchTrips: FetchTrips
     private var cancellables: Set<AnyCancellable> = []
     

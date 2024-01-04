@@ -1,5 +1,5 @@
 //
-//  TripElementView.swift
+//  CollorPallete.swift
 //  TestCode
 //
 //  Created by Carlos Roig Salvador on 4/1/24.

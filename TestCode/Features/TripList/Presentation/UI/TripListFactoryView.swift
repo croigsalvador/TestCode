@@ -29,7 +29,8 @@ struct TripListFactoryView: View {
                 }
             }
         }
-        .padding(.horizontal)
+        .padding()
+
     }
 }
 

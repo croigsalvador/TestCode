@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class TripUIModel: Identifiable {
     
     let trip: Trip
@@ -17,7 +16,7 @@ class TripUIModel: Identifiable {
     }
     
     var id: String {
-        trip.route
+        trip.description
     }
     
     var title: String {
@@ -34,5 +33,15 @@ class TripUIModel: Identifiable {
     
     var endTime: String {
         trip.endTime.hourDate
+    }
+}
+
+extension TripUIModel: Hashable {
+    static func == (lhs: TripUIModel, rhs: TripUIModel) -> Bool {
+        return lhs.id == rhs.id && lhs.title == rhs.title
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }

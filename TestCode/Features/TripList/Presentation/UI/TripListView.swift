@@ -14,7 +14,16 @@ struct TripListView: View {
     var body: some View {
         NavigationView {
             VStack {
-                TripListFactoryView(viewModel: viewModel)
+                MapView(region:$viewModel.viewMapState.mapRegion, annotations: viewModel.viewMapState.annotations)
+                    .frame(height: 380)
+                Spacer()
+                GeometryReader { reader in
+                    ScrollView {
+                        ScrollViewReader { scrollReader in
+                            TripListFactoryView(viewModel: viewModel)
+                        }
+                    }
+                }
             }.navigationBarItems(trailing: Button(action:viewModel.add) {
                 Image(systemName: "plus")
                     .tint(Color.black)
