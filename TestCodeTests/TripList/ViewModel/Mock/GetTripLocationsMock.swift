@@ -9,12 +9,12 @@ import Foundation
 import CoreLocation
 @testable import TestCode
 
-class GetTripLocationsMock: GetTripLocations {
+class GetTripAnnotablesMock: GetTripAnnotables {
     
-    var coordinates: [CLLocationCoordinate2D]?
+    var annotables: [Annotatable]!
     
-    func locations(_ trip: Trip) -> [CLLocationCoordinate2D] {
-        return coordinates!
+    func annotables(_ trip: Trip) -> [Annotatable] {
+        return annotables
     }
     
 }

@@ -8,6 +8,6 @@
 import Foundation
 import CoreLocation
 
-protocol GetTripLocations {
-    func locations(_ trip: Trip) -> [CLLocationCoordinate2D] 
+protocol GetTripAnnotables {
+    func annotables(_ trip: Trip) -> [Annotatable] 
 }

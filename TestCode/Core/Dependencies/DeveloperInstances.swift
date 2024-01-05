@@ -11,7 +11,7 @@ final class DeveloperInstances {
     static let shared = DeveloperInstances()
     
     var tripListViewModel: TripListViewModel {
-        TripListViewModel(fetchTrips: fetchTrips, getTripLocations: GetTripLocationsImpl(), regionCalculator: RegionCalculatorImpl())
+        TripListViewModel(fetchTrips: fetchTrips, getTripAnotables: GetTripAnnotablesImpl(), regionCalculator: RegionCalculatorImpl())
     }
     
     var fetchTrips: FetchTrips {

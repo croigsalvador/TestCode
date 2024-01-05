@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Location {
+struct Location: Annotatable {
     let address: String
     let point: Point
 }

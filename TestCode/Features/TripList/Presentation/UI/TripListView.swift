@@ -14,7 +14,9 @@ struct TripListView: View {
     var body: some View {
         NavigationView {
             VStack {
-                MapView(mapState: viewModel.mapState)
+                MapView(mapState: viewModel.mapState, selectedAnntation: { annotation in
+                    
+                })
                     .frame(height: 400)
                 Spacer()
                 GeometryReader { reader in

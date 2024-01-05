@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D2456412B48191A00729295 /* StopAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456402B48191A00729295 /* StopAnnotation.swift */; };
+		1D2456432B481E9800729295 /* LocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456422B481E9800729295 /* LocationAnnotation.swift */; };
+		1D2456452B48203A00729295 /* CustomAnnotationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456442B48203A00729295 /* CustomAnnotationFactory.swift */; };
+		1D2456472B48247800729295 /* Annotable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456462B48247800729295 /* Annotable.swift */; };
 		1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */; };
 		1DCA7CD52B3EE5890044DC0B /* TripUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */; };
 		1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD62B46D7090044DC0B /* TripRepository.swift */; };
@@ -58,7 +62,7 @@
 		1DCA7D5A2B480A220044DC0B /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D592B480A220044DC0B /* MapViewState.swift */; };
 		1DCA7D5C2B480CAE0044DC0B /* GetTripLocationsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D5B2B480CAE0044DC0B /* GetTripLocationsMock.swift */; };
 		1DCA7D5E2B480CEE0044DC0B /* RegionCalculatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D5D2B480CED0044DC0B /* RegionCalculatorImpl.swift */; };
-		1DCA7D602B480D170044DC0B /* GetTripLocationsImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D5F2B480D170044DC0B /* GetTripLocationsImpl.swift */; };
+		1DCA7D602B480D170044DC0B /* GetTripAnnotablesImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D5F2B480D170044DC0B /* GetTripAnnotablesImpl.swift */; };
 		1DCA7D622B480DA30044DC0B /* RegionCalculatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D612B480DA30044DC0B /* RegionCalculatorMock.swift */; };
 		1DCA7D642B48104B0044DC0B /* MapStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D632B48104B0044DC0B /* MapStateMock.swift */; };
 		1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */; };
@@ -97,6 +101,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D2456402B48191A00729295 /* StopAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopAnnotation.swift; sourceTree = "<group>"; };
+		1D2456422B481E9800729295 /* LocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnnotation.swift; sourceTree = "<group>"; };
+		1D2456442B48203A00729295 /* CustomAnnotationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationFactory.swift; sourceTree = "<group>"; };
+		1D2456462B48247800729295 /* Annotable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotable.swift; sourceTree = "<group>"; };
 		1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicError.swift; sourceTree = "<group>"; };
 		1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripUIModel.swift; sourceTree = "<group>"; };
 		1DCA7CD62B46D7090044DC0B /* TripRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepository.swift; sourceTree = "<group>"; };
@@ -146,7 +154,7 @@
 		1DCA7D592B480A220044DC0B /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		1DCA7D5B2B480CAE0044DC0B /* GetTripLocationsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripLocationsMock.swift; sourceTree = "<group>"; };
 		1DCA7D5D2B480CED0044DC0B /* RegionCalculatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionCalculatorImpl.swift; sourceTree = "<group>"; };
-		1DCA7D5F2B480D170044DC0B /* GetTripLocationsImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripLocationsImpl.swift; sourceTree = "<group>"; };
+		1DCA7D5F2B480D170044DC0B /* GetTripAnnotablesImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripAnnotablesImpl.swift; sourceTree = "<group>"; };
 		1DCA7D612B480DA30044DC0B /* RegionCalculatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionCalculatorMock.swift; sourceTree = "<group>"; };
 		1DCA7D632B48104B0044DC0B /* MapStateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStateMock.swift; sourceTree = "<group>"; };
 		1DEDA49F2B3EC1BA00A0897A /* TestCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +206,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D24563F2B48190600729295 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				1D2456402B48191A00729295 /* StopAnnotation.swift */,
+				1D2456422B481E9800729295 /* LocationAnnotation.swift */,
+				1D2456442B48203A00729295 /* CustomAnnotationFactory.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		1DCA7CD12B3EE49E0044DC0B /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,7 +441,7 @@
 				1DCA7D502B47FD500044DC0B /* RegionCalculator.swift */,
 				1DCA7D5D2B480CED0044DC0B /* RegionCalculatorImpl.swift */,
 				1DCA7D552B47FF810044DC0B /* GetTripLocations.swift */,
-				1DCA7D5F2B480D170044DC0B /* GetTripLocationsImpl.swift */,
+				1DCA7D5F2B480D170044DC0B /* GetTripAnnotablesImpl.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -557,6 +575,7 @@
 		1DEDA4E12B3ED56200A0897A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1D24563F2B48190600729295 /* Map */,
 				1DCA7D342B4768BB0044DC0B /* ViewModifier */,
 				1DCA7D0F2B47535C0044DC0B /* Coordinator */,
 				1DEDA4E72B3ED64C00A0897A /* Model */,
@@ -624,6 +643,7 @@
 				1DCA7D172B4759B30044DC0B /* Location.swift */,
 				1DCA7D192B4759B80044DC0B /* Point.swift */,
 				1DCA7D1B2B4759BD0044DC0B /* Stop.swift */,
+				1D2456462B48247800729295 /* Annotable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -783,6 +803,7 @@
 				1DCA7CD52B3EE5890044DC0B /* TripUIModel.swift in Sources */,
 				1DCA7D0E2B472B2C0044DC0B /* TripElementView.swift in Sources */,
 				1DCA7D562B47FF810044DC0B /* GetTripLocations.swift in Sources */,
+				1D2456472B48247800729295 /* Annotable.swift in Sources */,
 				1DCA7D5A2B480A220044DC0B /* MapViewState.swift in Sources */,
 				1DCA7CD92B46D7310044DC0B /* FetchTripsImpl.swift in Sources */,
 				1DCA7D3D2B4769CD0044DC0B /* TripStatus.swift in Sources */,
@@ -790,6 +811,7 @@
 				1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */,
 				1DCA7D582B4802FA0044DC0B /* MapPolylineOverlay.swift in Sources */,
 				1DCA7D012B4726780044DC0B /* TripListView.swift in Sources */,
+				1D2456452B48203A00729295 /* CustomAnnotationFactory.swift in Sources */,
 				1DCA7D182B4759B30044DC0B /* Location.swift in Sources */,
 				1DCA7CF12B4723940044DC0B /* TripRouter.swift in Sources */,
 				1DCA7CF32B4724190044DC0B /* TripNetworkProviderImpl.swift in Sources */,
@@ -801,13 +823,15 @@
 				1DCA7CE42B46D8640044DC0B /* TripApiModel.swift in Sources */,
 				1DCA7D512B47FD500044DC0B /* RegionCalculator.swift in Sources */,
 				1DCA7D0C2B472A310044DC0B /* ErrorView.swift in Sources */,
-				1DCA7D602B480D170044DC0B /* GetTripLocationsImpl.swift in Sources */,
+				1DCA7D602B480D170044DC0B /* GetTripAnnotablesImpl.swift in Sources */,
 				1DCA7CE12B46D8300044DC0B /* TripNetworkProvider.swift in Sources */,
 				1DCA7D452B476BDA0044DC0B /* MapView.swift in Sources */,
+				1D2456412B48191A00729295 /* StopAnnotation.swift in Sources */,
 				1DCA7D1C2B4759BD0044DC0B /* Stop.swift in Sources */,
 				1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */,
 				1DCA7D112B47536A0044DC0B /* TripListCoordinator.swift in Sources */,
 				1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */,
+				1D2456432B481E9800729295 /* LocationAnnotation.swift in Sources */,
 				1DCA7D202B475D150044DC0B /* StopApiModel.swift in Sources */,
 				1DCA7CFC2B47259E0044DC0B /* CustomHostingController.swift in Sources */,
 				1DEDA4E92B3ED65F00A0897A /* TripListViewState.swift in Sources */,

@@ -13,7 +13,7 @@ import MapKit
 final class TripListViewModelTests: XCTestCase {
     
     var fetchTripsMock: FetchTripsMock!
-    var getTripLocationsMock: GetTripLocationsMock!
+    var getTripAnnotablesMock: GetTripAnnotablesMock!
     var regionCalculatorMock: RegionCalculatorMock!
     var mapStateMock: MapStateMock!
     var sut: TripListViewModel!
@@ -21,10 +21,10 @@ final class TripListViewModelTests: XCTestCase {
 
     override func setUpWithError() throws {
         fetchTripsMock = FetchTripsMock()
-        getTripLocationsMock = GetTripLocationsMock()
+        getTripAnnotablesMock = GetTripAnnotablesMock()
         regionCalculatorMock = RegionCalculatorMock()
         mapStateMock = MapStateMock()
-        sut = TripListViewModel(mapState: mapStateMock, fetchTrips: fetchTripsMock, getTripLocations: getTripLocationsMock, regionCalculator: regionCalculatorMock)
+        sut = TripListViewModel(mapState: mapStateMock, fetchTrips: fetchTripsMock, getTripAnotables: getTripAnnotablesMock, regionCalculator: regionCalculatorMock)
     }
 
     override func tearDownWithError() throws {
@@ -81,33 +81,33 @@ final class TripListViewModelTests: XCTestCase {
     }
     
     func test_mapStateRegionShouldContainNewCoordinates() throws {
-        let newCoordinate = CLLocationCoordinate2D(latitude: 23.9292, longitude:-0.232)
+        let coordinate = CLLocationCoordinate2D(latitude: 23.9292, longitude:-0.232)
        
         var region = MKCoordinateRegion()
-        region.center = newCoordinate
+        region.center = coordinate
        
         regionCalculatorMock.region = region
-        getTripLocationsMock.coordinates = [newCoordinate]
+        getTripAnnotablesMock.annotables = [Location(address: "Test", point: Point(latitude: coordinate.latitude, longitude: coordinate.longitude))]
         
         mapStateMock.$mapRegion.dropFirst().sink { mapRegion in
-            XCTAssertTrue(mapRegion.center.latitude == newCoordinate.latitude && mapRegion.center.longitude == newCoordinate.longitude)
+            XCTAssertTrue(mapRegion.center.latitude == coordinate.latitude && mapRegion.center.longitude == coordinate.longitude)
         }.store(in: &cancellables)
         
         sut.userDidSelect(uiModel: TripUIModel(trip: tripsMock.first!))
     }
     
     func test_mapStateAnnotationsShouldContainNewCoordinates() throws {
-        let newCoordinate = CLLocationCoordinate2D(latitude: 23.9292, longitude:-0.232)
+        let coordinate = CLLocationCoordinate2D(latitude: 23.9292, longitude:-0.232)
        
         var region = MKCoordinateRegion()
-        region.center = newCoordinate
+        region.center = coordinate
        
         regionCalculatorMock.region = region
-        getTripLocationsMock.coordinates = [newCoordinate]
+        getTripAnnotablesMock.annotables = [Location(address: "Test", point: Point(latitude: coordinate.latitude, longitude: coordinate.longitude))]
         
         mapStateMock.$annotations.dropFirst().sink { annotations in
             if let annotation = annotations.first {
-                XCTAssertTrue(annotation.coordinate.latitude == newCoordinate.latitude && annotation.coordinate.longitude == newCoordinate .longitude)
+                XCTAssertTrue(annotation.coordinate.latitude == coordinate.latitude && annotation.coordinate.longitude == coordinate .longitude)
             }        }.store(in: &cancellables)
         
         sut.userDidSelect(uiModel: TripUIModel(trip: tripsMock.first!))

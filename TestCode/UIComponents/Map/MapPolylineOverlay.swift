@@ -14,13 +14,14 @@ struct MapPolylineOverlay: UIViewRepresentable {
     var annotations: [CustomPointAnnotation]
     var strokeColor: UIColor
     var lineWidth: CGFloat
-
+    var selectedAnntation: ((MKAnnotation)->())?
+    
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
         return mapView
     }
-
+    
     func updateUIView(_ uiView: MKMapView, context: Context) {
         uiView.setRegion(region, animated: true)
         uiView.removeOverlays(uiView.overlays)
@@ -30,22 +31,22 @@ struct MapPolylineOverlay: UIViewRepresentable {
         uiView.removeAnnotations(uiView.annotations)
         uiView.addAnnotations(annotations)
     }
-
+    
     func makeCoordinator() -> Coordinator {
-        Coordinator(self, strokeColor: strokeColor, lineWidth: lineWidth)
+        Coordinator(strokeColor: strokeColor, lineWidth: lineWidth, selectedAnntation: selectedAnntation)
     }
-
+    
     class Coordinator: NSObject, MKMapViewDelegate {
-        var parent: MapPolylineOverlay
         var strokeColor: UIColor
         var lineWidth: CGFloat
-
-        init(_ parent: MapPolylineOverlay, strokeColor: UIColor, lineWidth: CGFloat) {
-            self.parent = parent
+        var selectedAnntation: ((MKAnnotation)->())?
+        
+        init(strokeColor: UIColor, lineWidth: CGFloat, selectedAnntation: ((MKAnnotation) -> ())?) {
             self.strokeColor = strokeColor
             self.lineWidth = lineWidth
+            self.selectedAnntation = selectedAnntation
         }
-
+        
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
             if let polyline = overlay as? MKPolyline {
                 let renderer = MKPolylineRenderer(polyline: polyline)
@@ -55,5 +56,14 @@ struct MapPolylineOverlay: UIViewRepresentable {
             }
             return MKOverlayRenderer(overlay: overlay)
         }
+        
+        
+        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+            if let annotation = view.annotation as? MKAnnotation {
+                selectedAnntation?(annotation)
+            }
+            
+        }
+        
     }
 }

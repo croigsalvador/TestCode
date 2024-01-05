@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Stop {
+struct Stop: Annotatable {
     let id: Int?
-    let point: Point?
+    let point: Point
 }

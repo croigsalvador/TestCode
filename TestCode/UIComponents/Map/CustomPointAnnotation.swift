@@ -12,4 +12,5 @@ class CustomPointAnnotation: MKPointAnnotation, Identifiable, ObservableObject {
     
     let id = UUID().uuidString
     
+    
 }

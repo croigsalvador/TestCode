@@ -16,18 +16,18 @@ final class TripListViewModel: ObservableObject {
     @Published var mapState: MapViewState
     private var cancellables: Set<AnyCancellable> = []
     private let fetchTrips: FetchTrips
-    private let getTripLocations: GetTripLocations
+    private let getTripAnotables: GetTripAnnotables
     private let regionCalculator: RegionCalculator
     
     init(listState: TripListState = .idle,
          mapState: MapViewState = MapViewState(),
          fetchTrips: FetchTrips,
-         getTripLocations: GetTripLocations,
+         getTripAnotables: GetTripAnnotables,
          regionCalculator: RegionCalculator) {
         self.listState = listState
         self.mapState = mapState
         self.fetchTrips = fetchTrips
-        self.getTripLocations = getTripLocations
+        self.getTripAnotables = getTripAnotables
         self.regionCalculator = regionCalculator
     }
     
@@ -54,15 +54,19 @@ final class TripListViewModel: ObservableObject {
         mapState.annotations.removeAll()
         
         let trip = uiModel.trip
-        let coordinates  = getTripLocations.locations(trip)
+        let annotables  = getTripAnotables.annotables(trip)
         
         let polyline = Polyline(encodedPolyline: trip.route)
         if let decodedCoordinates: [CLLocationCoordinate2D] = polyline.coordinates {
             mapState.route = MKPolyline(coordinates: decodedCoordinates, count: decodedCoordinates.count)
         }
         
-        mapState.annotations = coordinates.map { CustomPointAnnotation(__coordinate: $0) }
-        mapState.mapRegion = regionCalculator.calculateForRoute(coordinates)
+        mapState.annotations = annotables.compactMap { CustomAnnotationFactory.createAnnotation($0) }
+        mapState.mapRegion = regionCalculator.calculateForRoute(annotables.compactMap {$0.coordinate})
+    }
+    
+    func userDidSelect(annotation: CustomPointAnnotation) {
+        print("SelectedAnnotation \(annotation)")
     }
     
     func add() {}
