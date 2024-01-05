@@ -8,16 +8,23 @@
 import XCTest
 @testable import TestCode
 import Combine
+import MapKit
 
 final class TripListViewModelTests: XCTestCase {
     
     var fetchTripsMock: FetchTripsMock!
+    var getTripLocationsMock: GetTripLocationsMock!
+    var regionCalculatorMock: RegionCalculatorMock!
+    var mapStateMock: MapStateMock!
     var sut: TripListViewModel!
     private var cancellables: Set<AnyCancellable> = []
 
     override func setUpWithError() throws {
         fetchTripsMock = FetchTripsMock()
-        sut = TripListViewModel(fetchTrips: fetchTripsMock)
+        getTripLocationsMock = GetTripLocationsMock()
+        regionCalculatorMock = RegionCalculatorMock()
+        mapStateMock = MapStateMock()
+        sut = TripListViewModel(mapState: mapStateMock, fetchTrips: fetchTripsMock, getTripLocations: getTripLocationsMock, regionCalculator: regionCalculatorMock)
     }
 
     override func tearDownWithError() throws {
@@ -32,7 +39,7 @@ final class TripListViewModelTests: XCTestCase {
         
         fetchTripsMock.publisher = .just(tripsMock).eraseToAnyPublisher()
         
-        sut.$viewState.dropFirst().sink { state in
+        sut.$listState.dropFirst().sink { state in
             XCTAssertTrue(state == .loading)
         }.store(in: &cancellables)
         
@@ -45,7 +52,7 @@ final class TripListViewModelTests: XCTestCase {
         
         fetchTripsMock.publisher = .just(tripsMock).eraseToAnyPublisher()
         
-        sut.$viewState.dropFirst(2).sink { state in
+        sut.$listState.dropFirst(2).sink { state in
             if case .loaded(let trips) = state {
                 XCTAssertTrue(!trips.isEmpty)
             } 
@@ -63,7 +70,7 @@ final class TripListViewModelTests: XCTestCase {
         
         fetchTripsMock.publisher = .fail(BasicError.unknownError).eraseToAnyPublisher()
         
-        sut.$viewState.dropFirst(2).sink { state in
+        sut.$listState.dropFirst(2).sink { state in
             XCTAssertTrue(state == .error)
             expectation.fulfill()
         }.store(in: &cancellables)
@@ -72,4 +79,39 @@ final class TripListViewModelTests: XCTestCase {
         
         wait(for: [expectation], timeout: 2.0)
     }
+    
+    func test_mapStateRegionShouldContainNewCoordinates() throws {
+        let newCoordinate = CLLocationCoordinate2D(latitude: 23.9292, longitude:-0.232)
+       
+        var region = MKCoordinateRegion()
+        region.center = newCoordinate
+       
+        regionCalculatorMock.region = region
+        getTripLocationsMock.coordinates = [newCoordinate]
+        
+        mapStateMock.$mapRegion.dropFirst().sink { mapRegion in
+            XCTAssertTrue(mapRegion.center.latitude == newCoordinate.latitude && mapRegion.center.longitude == newCoordinate.longitude)
+        }.store(in: &cancellables)
+        
+        sut.userDidSelect(uiModel: TripUIModel(trip: tripsMock.first!))
+    }
+    
+    func test_mapStateAnnotationsShouldContainNewCoordinates() throws {
+        let newCoordinate = CLLocationCoordinate2D(latitude: 23.9292, longitude:-0.232)
+       
+        var region = MKCoordinateRegion()
+        region.center = newCoordinate
+       
+        regionCalculatorMock.region = region
+        getTripLocationsMock.coordinates = [newCoordinate]
+        
+        mapStateMock.$annotations.dropFirst().sink { annotations in
+            if let annotation = annotations.first {
+                XCTAssertTrue(annotation.coordinate.latitude == newCoordinate.latitude && annotation.coordinate.longitude == newCoordinate .longitude)
+            }        }.store(in: &cancellables)
+        
+        sut.userDidSelect(uiModel: TripUIModel(trip: tripsMock.first!))
+    }
+    
+
 }

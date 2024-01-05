@@ -9,13 +9,9 @@ import MapKit
 
 struct MapView: View {
     
-    @Binding var region: MKCoordinateRegion
-    var annotations: [CustomPointAnnotations]
-    
+    @ObservedObject var mapState: MapViewState
+
     var body: some View {
-        Map(coordinateRegion: $region, annotationItems: annotations) { annotation in
-            MapMarker(coordinate: annotation.coordinate, tint: .red)
-        }
+        MapPolylineOverlay(polyline: mapState.route, region: mapState.mapRegion, annotations:  mapState.annotations, strokeColor: UIColor.blue, lineWidth: 5)
     }
 }
-

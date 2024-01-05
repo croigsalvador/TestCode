@@ -14,8 +14,8 @@ struct TripListView: View {
     var body: some View {
         NavigationView {
             VStack {
-                MapView(region:$viewModel.viewMapState.mapRegion, annotations: viewModel.viewMapState.annotations)
-                    .frame(height: 380)
+                MapView(mapState: viewModel.mapState)
+                    .frame(height: 400)
                 Spacer()
                 GeometryReader { reader in
                     ScrollView {

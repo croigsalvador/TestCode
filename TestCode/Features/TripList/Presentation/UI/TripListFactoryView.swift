@@ -13,24 +13,25 @@ struct TripListFactoryView: View {
     let columns = [GridItem(.flexible(minimum:16.0))]
     
     var body: some View {
-        LazyVGrid(columns: columns) {
-            switch viewModel.viewState {
-            case .idle:
-                CustomProgressView()
-            case .empty:
-                ErrorView(title: "There aren't trips", subtitle: "")
-            case .error:
-                ErrorView(title: "Something has failed", subtitle: "There was an error. Press the button or tap on the screen to refresh")
-            case .loading:
-                CustomProgressView()
-            case .loaded(let elements):
+        switch viewModel.listState {
+        case .idle:
+            CustomProgressView()
+        case .empty:
+            ErrorView(title: "There aren't trips", subtitle: "")
+        case .error:
+            ErrorView(title: "Something has failed", subtitle: "There was an error")
+        case .loading:
+            CustomProgressView()
+        case .loaded(let elements):
+            LazyVGrid(columns: columns) {
                 ForEach(elements) { model in
                     TripElementView(uiModel: model)
+                        .onTapGesture {
+                            viewModel.userDidSelect(uiModel: model)
+                        }
                 }
-            }
+            }.padding()
         }
-        .padding()
-
     }
 }
 
