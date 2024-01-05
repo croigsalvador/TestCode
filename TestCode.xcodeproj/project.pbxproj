@@ -11,6 +11,13 @@
 		1D2456432B481E9800729295 /* LocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456422B481E9800729295 /* LocationAnnotation.swift */; };
 		1D2456452B48203A00729295 /* CustomAnnotationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456442B48203A00729295 /* CustomAnnotationFactory.swift */; };
 		1D2456472B48247800729295 /* Annotable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456462B48247800729295 /* Annotable.swift */; };
+		1D24564A2B482BFC00729295 /* GetStopInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456492B482BFC00729295 /* GetStopInfo.swift */; };
+		1D24564C2B482C2800729295 /* StopInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D24564B2B482C2800729295 /* StopInfo.swift */; };
+		1D24564E2B4847B200729295 /* GetStopInfoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D24564D2B4847B100729295 /* GetStopInfoMock.swift */; };
+		1D2456502B4849B200729295 /* PopUpViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D24564F2B4849B200729295 /* PopUpViewState.swift */; };
+		1D2456542B484D8B00729295 /* StopInfoUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456532B484D8B00729295 /* StopInfoUIModel.swift */; };
+		1D2456562B484DD200729295 /* LocationUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456552B484DD200729295 /* LocationUIModel.swift */; };
+		1D2456582B4850BD00729295 /* GetStopInfoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456572B4850BD00729295 /* GetStopInfoImpl.swift */; };
 		1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */; };
 		1DCA7CD52B3EE5890044DC0B /* TripUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */; };
 		1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD62B46D7090044DC0B /* TripRepository.swift */; };
@@ -105,6 +112,13 @@
 		1D2456422B481E9800729295 /* LocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnnotation.swift; sourceTree = "<group>"; };
 		1D2456442B48203A00729295 /* CustomAnnotationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationFactory.swift; sourceTree = "<group>"; };
 		1D2456462B48247800729295 /* Annotable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotable.swift; sourceTree = "<group>"; };
+		1D2456492B482BFC00729295 /* GetStopInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStopInfo.swift; sourceTree = "<group>"; };
+		1D24564B2B482C2800729295 /* StopInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopInfo.swift; sourceTree = "<group>"; };
+		1D24564D2B4847B100729295 /* GetStopInfoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStopInfoMock.swift; sourceTree = "<group>"; };
+		1D24564F2B4849B200729295 /* PopUpViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewState.swift; sourceTree = "<group>"; };
+		1D2456532B484D8B00729295 /* StopInfoUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopInfoUIModel.swift; sourceTree = "<group>"; };
+		1D2456552B484DD200729295 /* LocationUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUIModel.swift; sourceTree = "<group>"; };
+		1D2456572B4850BD00729295 /* GetStopInfoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStopInfoImpl.swift; sourceTree = "<group>"; };
 		1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicError.swift; sourceTree = "<group>"; };
 		1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripUIModel.swift; sourceTree = "<group>"; };
 		1DCA7CD62B46D7090044DC0B /* TripRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepository.swift; sourceTree = "<group>"; };
@@ -214,6 +228,15 @@
 				1D2456442B48203A00729295 /* CustomAnnotationFactory.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		1D2456482B482BF000729295 /* GetStopInfo */ = {
+			isa = PBXGroup;
+			children = (
+				1D2456492B482BFC00729295 /* GetStopInfo.swift */,
+				1D2456572B4850BD00729295 /* GetStopInfoImpl.swift */,
+			);
+			path = GetStopInfo;
 			sourceTree = "<group>";
 		};
 		1DCA7CD12B3EE49E0044DC0B /* Error */ = {
@@ -592,6 +615,8 @@
 				1DCA7D002B4726780044DC0B /* TripListView.swift */,
 				1DCA7D052B4729E40044DC0B /* TripListFactoryView.swift */,
 				1DCA7D0D2B472B2C0044DC0B /* TripElementView.swift */,
+				1D24564F2B4849B200729295 /* PopUpViewState.swift */,
+				1D2456552B484DD200729295 /* LocationUIModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -601,6 +626,7 @@
 			children = (
 				1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */,
 				1DCA7D3C2B4769CD0044DC0B /* TripStatus.swift */,
+				1D2456532B484D8B00729295 /* StopInfoUIModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -613,6 +639,7 @@
 				1DCA7D5B2B480CAE0044DC0B /* GetTripLocationsMock.swift */,
 				1DCA7D612B480DA30044DC0B /* RegionCalculatorMock.swift */,
 				1DCA7D632B48104B0044DC0B /* MapStateMock.swift */,
+				1D24564D2B4847B100729295 /* GetStopInfoMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -630,6 +657,7 @@
 		1DEDA4EE2B3EDDA900A0897A /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				1D2456482B482BF000729295 /* GetStopInfo */,
 				1DCA7D4D2B47FA200044DC0B /* Map */,
 				1DCA7D4A2B47F88C0044DC0B /* FetchTrips */,
 			);
@@ -644,6 +672,7 @@
 				1DCA7D192B4759B80044DC0B /* Point.swift */,
 				1DCA7D1B2B4759BD0044DC0B /* Stop.swift */,
 				1D2456462B48247800729295 /* Annotable.swift */,
+				1D24564B2B482C2800729295 /* StopInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -825,7 +854,9 @@
 				1DCA7D0C2B472A310044DC0B /* ErrorView.swift in Sources */,
 				1DCA7D602B480D170044DC0B /* GetTripAnnotablesImpl.swift in Sources */,
 				1DCA7CE12B46D8300044DC0B /* TripNetworkProvider.swift in Sources */,
+				1D2456542B484D8B00729295 /* StopInfoUIModel.swift in Sources */,
 				1DCA7D452B476BDA0044DC0B /* MapView.swift in Sources */,
+				1D2456582B4850BD00729295 /* GetStopInfoImpl.swift in Sources */,
 				1D2456412B48191A00729295 /* StopAnnotation.swift in Sources */,
 				1DCA7D1C2B4759BD0044DC0B /* Stop.swift in Sources */,
 				1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */,
@@ -838,9 +869,12 @@
 				1DCA7D3B2B4769510044DC0B /* Tag.swift in Sources */,
 				1DCA7D422B476B9B0044DC0B /* CustomPointAnnotation.swift in Sources */,
 				1DCA7D1E2B475D090044DC0B /* LocationApiModel.swift in Sources */,
+				1D24564C2B482C2800729295 /* StopInfo.swift in Sources */,
+				1D24564A2B482BFC00729295 /* GetStopInfo.swift in Sources */,
 				1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */,
 				1DCA7CE82B46D92D0044DC0B /* TripRepositoryImpl.swift in Sources */,
 				1DCA7D5E2B480CEE0044DC0B /* RegionCalculatorImpl.swift in Sources */,
+				1D2456502B4849B200729295 /* PopUpViewState.swift in Sources */,
 				1DCA7D0B2B472A310044DC0B /* CustomProgressView.swift in Sources */,
 				1DCA7D332B4767E10044DC0B /* ViewModifier.swift in Sources */,
 				1DCA7D062B4729E40044DC0B /* TripListFactoryView.swift in Sources */,
@@ -849,6 +883,7 @@
 				1DCA7D2F2B4767250044DC0B /* MainTheme.swift in Sources */,
 				1DCA7CED2B471DFD0044DC0B /* String+Date.swift in Sources */,
 				1DCA7D392B4769460044DC0B /* TagView.swift in Sources */,
+				1D2456562B484DD200729295 /* LocationUIModel.swift in Sources */,
 				1DCA7D362B4768C40044DC0B /* TripViewModifier.swift in Sources */,
 				1DCA7D1A2B4759B80044DC0B /* Point.swift in Sources */,
 				1DEDA4A52B3EC1BA00A0897A /* SceneDelegate.swift in Sources */,
@@ -862,6 +897,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D24564E2B4847B200729295 /* GetStopInfoMock.swift in Sources */,
 				1DEDA4E52B3ED5C000A0897A /* TripListViewModelTests.swift in Sources */,
 				1DCA7D242B475E350044DC0B /* TripApiModelMock.swift in Sources */,
 				1DCA7D5C2B480CAE0044DC0B /* GetTripLocationsMock.swift in Sources */,
