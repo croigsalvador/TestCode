@@ -66,7 +66,11 @@ final class TripListViewModel: ObservableObject {
     }
     
     func userDidSelect(annotation: CustomPointAnnotation) {
-        print("SelectedAnnotation \(annotation)")
+        if let stopAnnotation = annotation as? StopAnnotation {
+            
+        } else if let locationAnnotation = annotation as? LocationAnnotation {
+            
+        }
     }
     
     func add() {}

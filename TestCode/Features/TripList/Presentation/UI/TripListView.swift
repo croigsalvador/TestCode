@@ -15,7 +15,7 @@ struct TripListView: View {
         NavigationView {
             VStack {
                 MapView(mapState: viewModel.mapState, selectedAnntation: { annotation in
-                    
+                    viewModel.userDidSelect(annotation: annotation)
                 })
                     .frame(height: 400)
                 Spacer()

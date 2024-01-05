@@ -10,7 +10,7 @@ import MapKit
 struct MapView: View {
     
     @ObservedObject var mapState: MapViewState
-    var selectedAnntation: ((MKAnnotation)->())?
+    var selectedAnntation: ((CustomPointAnnotation)->())?
     
     var body: some View {
         MapPolylineOverlay(polyline: mapState.route, region: mapState.mapRegion, annotations:  mapState.annotations, strokeColor: UIColor.blue, lineWidth: 5, selectedAnntation: selectedAnntation)

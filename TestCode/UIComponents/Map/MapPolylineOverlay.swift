@@ -14,7 +14,7 @@ struct MapPolylineOverlay: UIViewRepresentable {
     var annotations: [CustomPointAnnotation]
     var strokeColor: UIColor
     var lineWidth: CGFloat
-    var selectedAnntation: ((MKAnnotation)->())?
+    var selectedAnntation: ((CustomPointAnnotation)->())?
     
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
@@ -39,9 +39,9 @@ struct MapPolylineOverlay: UIViewRepresentable {
     class Coordinator: NSObject, MKMapViewDelegate {
         var strokeColor: UIColor
         var lineWidth: CGFloat
-        var selectedAnntation: ((MKAnnotation)->())?
+        var selectedAnntation: ((CustomPointAnnotation)->())?
         
-        init(strokeColor: UIColor, lineWidth: CGFloat, selectedAnntation: ((MKAnnotation) -> ())?) {
+        init(strokeColor: UIColor, lineWidth: CGFloat, selectedAnntation: ((CustomPointAnnotation) -> ())?) {
             self.strokeColor = strokeColor
             self.lineWidth = lineWidth
             self.selectedAnntation = selectedAnntation
@@ -59,7 +59,7 @@ struct MapPolylineOverlay: UIViewRepresentable {
         
         
         func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-            if let annotation = view.annotation as? MKAnnotation {
+            if let annotation = view.annotation as? CustomPointAnnotation {
                 selectedAnntation?(annotation)
             }
             
