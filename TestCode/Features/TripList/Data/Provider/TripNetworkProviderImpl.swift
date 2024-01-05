@@ -19,4 +19,12 @@ struct TripNetworkProviderImpl: TripNetworkProvider {
                .receive(on: DispatchQueue.main)
                .eraseToAnyPublisher()
     }
+    
+    func getStopInfo(id: Int) -> AnyPublisher<StopInfoApiModel, Error> {
+        session.dataTaskPublisher(for: TripRouter.getStopInfo(id: id).request)
+               .map(\.data)
+               .decode(type: StopInfoApiModel.self, decoder: JSONDecoder())
+               .receive(on: DispatchQueue.main)
+               .eraseToAnyPublisher()
+    }
 }

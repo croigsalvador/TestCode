@@ -10,4 +10,5 @@ import Combine
 
 protocol TripRepository {
     func fetchTrips() -> AnyPublisher<[Trip], BasicError>
+    func getStopInfo(id: Int) -> AnyPublisher<StopInfo, BasicError>
 }

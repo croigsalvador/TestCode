@@ -71,4 +71,18 @@ extension StopApiModel {
     }
 }
 
+extension StopInfoApiModel {
+    static var mock: StopInfoApiModel {
+        return StopInfoApiModel(
+            price: 1.5,
+            address: "Ramblas, Barcelona",
+            tripId: 1,
+            paid: true,
+            stopTime: "2018-12-18T08:10:00.000Z",
+            point: PointApiModel(latitude: 41.37653, longitude: 2.17924),
+            userName: "Manuel Gomez"
+        )
+    }
+}
+
 

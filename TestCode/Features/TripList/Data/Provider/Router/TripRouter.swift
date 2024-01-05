@@ -9,15 +9,22 @@ import Foundation
 
 enum TripRouter {
     case fetchTrips
+    case getStopInfo(id: Int)
 
-    var baseURL: URL {
-        URL(string: "https://sandbox-giravolta-static.s3.eu-west-1.amazonaws.com/tech-test/trips.json")!
+    static let baseURL = URL(string: "https://sandbox-giravolta-static.s3.eu-west-1.amazonaws.com/tech-test")!
+    
+    var path: String {
+        switch self {
+        case .fetchTrips:
+            return "trips.json"
+        case .getStopInfo(_):
+            return "stops.json"
+        }
     }
 
     var request: URLRequest {
-        switch self {
-        case .fetchTrips:
-            return URLRequest(url: baseURL)
-        }
+        let url = TripRouter.baseURL.appendingPathComponent(path)
+
+        return URLRequest(url: url)
     }
 }

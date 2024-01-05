@@ -18,6 +18,7 @@
 		1D2456542B484D8B00729295 /* StopInfoUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456532B484D8B00729295 /* StopInfoUIModel.swift */; };
 		1D2456562B484DD200729295 /* LocationUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456552B484DD200729295 /* LocationUIModel.swift */; };
 		1D2456582B4850BD00729295 /* GetStopInfoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456572B4850BD00729295 /* GetStopInfoImpl.swift */; };
+		1D24565A2B485CE600729295 /* StopInfoApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456592B485CE600729295 /* StopInfoApiModel.swift */; };
 		1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */; };
 		1DCA7CD52B3EE5890044DC0B /* TripUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */; };
 		1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD62B46D7090044DC0B /* TripRepository.swift */; };
@@ -119,6 +120,7 @@
 		1D2456532B484D8B00729295 /* StopInfoUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopInfoUIModel.swift; sourceTree = "<group>"; };
 		1D2456552B484DD200729295 /* LocationUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUIModel.swift; sourceTree = "<group>"; };
 		1D2456572B4850BD00729295 /* GetStopInfoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStopInfoImpl.swift; sourceTree = "<group>"; };
+		1D2456592B485CE600729295 /* StopInfoApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopInfoApiModel.swift; sourceTree = "<group>"; };
 		1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicError.swift; sourceTree = "<group>"; };
 		1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripUIModel.swift; sourceTree = "<group>"; };
 		1DCA7CD62B46D7090044DC0B /* TripRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepository.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				1DCA7D1D2B475D090044DC0B /* LocationApiModel.swift */,
 				1DCA7D1F2B475D150044DC0B /* StopApiModel.swift */,
 				1DCA7D212B475D310044DC0B /* PointApiModel.swift */,
+				1D2456592B485CE600729295 /* StopInfoApiModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -865,6 +868,7 @@
 				1D2456432B481E9800729295 /* LocationAnnotation.swift in Sources */,
 				1DCA7D202B475D150044DC0B /* StopApiModel.swift in Sources */,
 				1DCA7CFC2B47259E0044DC0B /* CustomHostingController.swift in Sources */,
+				1D24565A2B485CE600729295 /* StopInfoApiModel.swift in Sources */,
 				1DEDA4E92B3ED65F00A0897A /* TripListViewState.swift in Sources */,
 				1DCA7D3B2B4769510044DC0B /* Tag.swift in Sources */,
 				1DCA7D422B476B9B0044DC0B /* CustomPointAnnotation.swift in Sources */,

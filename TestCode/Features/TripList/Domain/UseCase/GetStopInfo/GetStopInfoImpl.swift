@@ -13,7 +13,7 @@ struct GetStopInfoImpl: GetStopInfo {
     let repository: TripRepository
     
     func getInfo(id: Int) -> AnyPublisher<StopInfo, BasicError> {
-        return .fail(.networkError)
+        return repository.getStopInfo(id: id)
     }
     
 }

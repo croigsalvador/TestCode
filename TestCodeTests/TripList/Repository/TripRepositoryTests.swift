@@ -98,4 +98,47 @@ final class TripRepositoryTests: XCTestCase {
 
         wait(for: [expectation], timeout: 1.0)
     }
+    
+    func test_getStopInfoShouldFail() {
+        let expectation = XCTestExpectation(description: "StopInfo failure")
+
+        providerMock.stopInfoPublisher = Fail(error: BasicError.networkError).eraseToAnyPublisher()
+
+        let result = sut.getStopInfo(id: 1)
+
+        result.sink(receiveCompletion: { completion in
+            if case let .failure(error) = completion {
+                XCTAssertEqual(error, BasicError.networkError)
+                expectation.fulfill()
+            }
+        }, receiveValue: { _ in
+            XCTFail("Expected fetch to fail, but it succeeded")
+        })
+        .store(in: &cancellables)
+
+        wait(for: [expectation], timeout: 1.0)
+    }
+    
+    func test_getStopInfoShouldSuccess() {
+        let expectation = XCTestExpectation(description: "Get Stop info success")
+        
+        providerMock.stopInfoPublisher = Just(StopInfoApiModel.mock).setFailureType(to:  Error.self).eraseToAnyPublisher()
+
+        let result = sut.getStopInfo(id: 1)
+
+        result.sink(receiveCompletion: { completion in
+            switch completion {
+            case .finished:
+                break
+            case .failure:
+                XCTFail("Expected successful trip fetch")
+            }
+        }, receiveValue: { stopInfo in
+            XCTAssertEqual(stopInfo.userName, StopInfoApiModel.mock.userName)
+            expectation.fulfill()
+        })
+        .store(in: &cancellables)
+
+        wait(for: [expectation], timeout: 1.0)
+    }
 }

@@ -10,4 +10,5 @@ import Combine
 
 protocol TripNetworkProvider {
     func fetchtTrips() -> AnyPublisher<[TripApiModel], Error>
+    func getStopInfo(id: Int) -> AnyPublisher<StopInfoApiModel, Error>
 }
