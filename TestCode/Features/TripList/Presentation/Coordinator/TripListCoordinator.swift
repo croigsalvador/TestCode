@@ -21,11 +21,13 @@ class TripListCoordinator: Coordinator {
     }
 
     func start() {
-        guard let fetchTrips: FetchTrips = try? container.resolve() else {
+        guard let fetchTrips: FetchTrips = try? container.resolve(),
+              let regionCalculator: RegionCalculator = try? container.resolve(),
+              let getTripLocations: GetTripLocations = try? container.resolve() else {
             return
         }
         
-        let viewModel = TripListViewModel(fetchTrips: fetchTrips)
+        let viewModel = TripListViewModel(fetchTrips: fetchTrips, getTripLocations: getTripLocations, regionCalculator: regionCalculator)
         let view = TripListView(viewModel: viewModel)
         
         let viewController = CustomHostingController(shouldShowNavigationBar: false, rootView: view)
@@ -37,6 +39,8 @@ class TripListCoordinator: Coordinator {
         container.register { TripNetworkProviderImpl(session: try self.container.resolve()) as TripNetworkProvider }
         container.register { TripRepositoryImpl(provider: try self.container.resolve()) as TripRepository }
         container.register { FetchTripsImpl(repository: try self.container.resolve()) as FetchTrips }
+        container.register { GetTripLocationsImpl() as GetTripLocations }
+        container.register { RegionCalculatorImpl() as RegionCalculator }
     }
     
 }

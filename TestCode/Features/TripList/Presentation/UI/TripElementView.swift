@@ -29,5 +29,6 @@ struct TripElementView: View {
             .cornerRadius(8)
             .overlay(RoundedRectangle(cornerRadius: 8)
                 .stroke(Color.black.opacity(0.1), lineWidth: 1))
+            .background(Color.theme.primaryBackgroundColor)
     }
 }

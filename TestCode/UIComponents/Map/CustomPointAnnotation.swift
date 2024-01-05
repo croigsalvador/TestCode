@@ -8,7 +8,7 @@
 import Foundation
 import MapKit
 
-class CustomPointAnnotations: MKPointAnnotation, Identifiable, ObservableObject {
+class CustomPointAnnotation: MKPointAnnotation, Identifiable, ObservableObject {
     
     let id = UUID().uuidString
     
