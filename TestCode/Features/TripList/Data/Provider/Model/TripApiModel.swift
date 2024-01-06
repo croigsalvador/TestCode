@@ -31,8 +31,8 @@ struct TripApiModel: Codable {
             route: route,
             startTime: startDate,
             endTime: endDate,
-            origin: origin.toDomainModel(),
-            destination: destination.toDomainModel(),
+            origin: origin.toDomainModel(type: .origin),
+            destination: destination.toDomainModel(type: .origin),
             stops: stops.map { $0.compactMap { $0.toDomainModel()} },
             description: description)
     }

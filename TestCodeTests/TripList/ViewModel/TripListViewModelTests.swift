@@ -89,7 +89,7 @@ final class TripListViewModelTests: XCTestCase {
         region.center = coordinate
         
         regionCalculatorMock.region = region
-        getTripAnnotablesMock.annotables = [Location(address: "Test", point: Point(latitude: coordinate.latitude, longitude: coordinate.longitude))]
+        getTripAnnotablesMock.annotables = [Location(address: "Test", point: Point(latitude: coordinate.latitude, longitude: coordinate.longitude), type: .origin)]
         
         mapStateMock.$mapRegion.dropFirst().sink { mapRegion in
             XCTAssertTrue(mapRegion.center.latitude == coordinate.latitude && mapRegion.center.longitude == coordinate.longitude)
@@ -105,7 +105,7 @@ final class TripListViewModelTests: XCTestCase {
         region.center = coordinate
         
         regionCalculatorMock.region = region
-        getTripAnnotablesMock.annotables = [Location(address: "Test", point: Point(latitude: coordinate.latitude, longitude: coordinate.longitude))]
+        getTripAnnotablesMock.annotables = [Location(address: "Test", point: Point(latitude: coordinate.latitude, longitude: coordinate.longitude), type: .destitnation)]
         
         mapStateMock.$annotations.dropFirst().sink { annotations in
             if let annotation = annotations.first {
@@ -126,9 +126,9 @@ final class TripListViewModelTests: XCTestCase {
         
         getStopInfoMock.publisher = .just(stopInfo).eraseToAnyPublisher()
         
-        sut.$popUpState.dropFirst(2).sink { state in
+        sut.$popUpState.dropFirst(1).sink { state in
             if case .showStop(let stopUIModel) = state {
-                XCTAssertTrue(stopUIModel.userName == stopInfo.userName)
+                XCTAssertTrue(stopUIModel.stopInfo.userName == stopInfo.userName)
                 expectation.fulfill()
             }
         }.store(in: &cancellables)
@@ -147,11 +147,9 @@ final class TripListViewModelTests: XCTestCase {
                 
         getStopInfoMock.publisher = .fail(.unknownError).eraseToAnyPublisher()
         
-        sut.$popUpState.dropFirst(2).sink { state in
-            if state != .loading {
+        sut.$popUpState.dropFirst().sink { state in
                 XCTAssertTrue(state == .error)
                 expectation.fulfill()
-            }
         }.store(in: &cancellables)
         
         sut.userDidSelect(annotation: stopAnnotation)
@@ -163,13 +161,13 @@ final class TripListViewModelTests: XCTestCase {
         
         let expectation = XCTestExpectation(description: "Get Stop info fail expectation")
         let point = Point(latitude: 23.9292, longitude:-0.232)
-        let location = Location(address: "Test address", point: point)
+        let location = Location(address: "Test address", point: point, type: .origin)
         let locationAnnotation = LocationAnnotation(location: location)
                 
         
-        sut.$popUpState.dropFirst(2).sink { state in
+        sut.$popUpState.dropFirst(1).sink { state in
             if case .showLocation(let model) = state {
-                XCTAssertTrue(model.title == location.address)
+                XCTAssertTrue(model.address == location.address)
                 expectation.fulfill()
             }
         }.store(in: &cancellables)

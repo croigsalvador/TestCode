@@ -8,9 +8,11 @@
 import Foundation
 import CoreLocation
 
+
 protocol Annotatable {
     var coordinate: CLLocationCoordinate2D {get}
     var point: Point {get}
+    var type: StopType {get}
 }
 
 extension Annotatable {

@@ -30,8 +30,8 @@ extension Location {
     static var mock: Location {
         return Location(
             address: "456 Test Avenue, Test City",
-            point: Point.mock
-        )
+            point: Point.mock, type: .origin)
+        
     }
 }
 

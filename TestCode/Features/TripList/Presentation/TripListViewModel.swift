@@ -39,12 +39,6 @@ final class TripListViewModel: ObservableObject {
     }
     
     func onAppear() {
-        for family in UIFont.familyNames {
-            print("\(family)")
-            for names in UIFont.fontNames(forFamilyName: family) {
-                print("== \(names)")
-            }
-        }
         fetchTripList()
     }
     
@@ -79,7 +73,6 @@ final class TripListViewModel: ObservableObject {
     }
     
     func userDidSelect(annotation: CustomPointAnnotation) {
-        popUpState = .idle
         if let stopAnnotation = annotation as? StopAnnotation {
             getInfo(stopAnnotation.stop)
         } else if let locationAnnotation = annotation as? LocationAnnotation {

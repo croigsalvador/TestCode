@@ -12,7 +12,7 @@ struct PopUpView<Content:View>: View {
     let content: Content
     let title: String
     @State private var dragAmount = CGSize.zero
-
+    
     
     @Binding var showingView: Bool
     
@@ -22,22 +22,13 @@ struct PopUpView<Content:View>: View {
             if showingView {
                 withAnimation {
                     VStack(alignment: .leading, spacing: 10) {
-                        HStack {
-                            Spacer()
-                            Text(title)
-                                .titleModifier()
-                            Spacer()
-                            Button(action: {
-                                withAnimation {
-                                    showingView = false
-                                }
-                            }, label: {
-                                Image(systemName: "xmark")
-                                    .tint(Color.black)
-                            })
-                            .padding()
-                        }
-                        content
+                        RoundedRectangle(cornerRadius: 2)
+                            .frame(width: 60, height: 4)
+                            .padding([.bottom], 20)
+                            .frame(maxWidth: .infinity, alignment: .center)
+                        
+                        content.frame(maxWidth: .infinity, alignment: .center)
+                            .padding(.bottom, 20)
                     }
                 }
                 .padding()

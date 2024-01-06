@@ -11,7 +11,7 @@ struct LocationApiModel: Codable {
     let address: String
     let point: PointApiModel
     
-    func toDomainModel() -> Location {
-        return Location(address: address, point: point.toDomainModel())
+    func toDomainModel(type: StopType) -> Location {
+        return Location(address: address, point: point.toDomainModel(), type: type)
     }
 }

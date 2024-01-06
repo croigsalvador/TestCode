@@ -12,19 +12,26 @@ struct LocationInfoView: View {
     
     var body: some View {
         VStack {
-            Text("Stop Information")
-                .font(Font.theme.titleFont)
-                .foregroundColor(Color.theme.primaryTextColor)
-                .padding(.bottom, 2)
-                .frame(alignment: .center)
-            
             VStack {
-                Text(uiModel.address)
+                Text("Stop Information")
+                    .font(Font.theme.highlightFont)
+                    .foregroundColor(Color.theme.primaryTextColor)
                     .padding()
-                    .padding()
-            }.padding(8)
-                .font(Font.theme.subtitleFont)
-                .foregroundColor(Color.theme.primaryTextColor)
+                    .frame(alignment: .center)
+                VStack(spacing: 8, content: {
+                    Text(uiModel.typeText)
+                        .font(Font.theme.subtitleFont)
+                        .foregroundColor(Color.theme.primaryTextColor)
+                        .frame(alignment: .center)
+                    Text(uiModel.address)
+                        .font(Font.theme.subtitleFont)
+                        .foregroundColor(Color.theme.primaryTextColor)
+                }).padding(12)
+            }
+            .cornerRadius(8)
+            .overlay(RoundedRectangle(cornerRadius: 8)
+                .stroke(Color.black.opacity(0.1), lineWidth: 1))
+            .background(Color.theme.primaryBackgroundColor)
         }
     }
 }

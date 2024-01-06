@@ -23,6 +23,7 @@
 		1D2456632B48672900729295 /* StopInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456622B48672900729295 /* StopInfoView.swift */; };
 		1D7F31542B496DF6006D3DC8 /* TripPopUpFactoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31532B496DF6006D3DC8 /* TripPopUpFactoryView.swift */; };
 		1D7F31572B49719A006D3DC8 /* LocationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31562B49719A006D3DC8 /* LocationInfoView.swift */; };
+		1D7F31592B4977BB006D3DC8 /* StopType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31582B4977BB006D3DC8 /* StopType.swift */; };
 		1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */; };
 		1DCA7CD52B3EE5890044DC0B /* TripUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */; };
 		1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD62B46D7090044DC0B /* TripRepository.swift */; };
@@ -129,6 +130,7 @@
 		1D2456622B48672900729295 /* StopInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopInfoView.swift; sourceTree = "<group>"; };
 		1D7F31532B496DF6006D3DC8 /* TripPopUpFactoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPopUpFactoryView.swift; sourceTree = "<group>"; };
 		1D7F31562B49719A006D3DC8 /* LocationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoView.swift; sourceTree = "<group>"; };
+		1D7F31582B4977BB006D3DC8 /* StopType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopType.swift; sourceTree = "<group>"; };
 		1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicError.swift; sourceTree = "<group>"; };
 		1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripUIModel.swift; sourceTree = "<group>"; };
 		1DCA7CD62B46D7090044DC0B /* TripRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepository.swift; sourceTree = "<group>"; };
@@ -728,6 +730,7 @@
 				1DCA7D1B2B4759BD0044DC0B /* Stop.swift */,
 				1D2456462B48247800729295 /* Annotable.swift */,
 				1D24564B2B482C2800729295 /* StopInfo.swift */,
+				1D7F31582B4977BB006D3DC8 /* StopType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -907,6 +910,7 @@
 				1DEDA4F82B3EE21A00A0897A /* Publisher+Utils.swift in Sources */,
 				1DCA7D302B4767250044DC0B /* Theme.swift in Sources */,
 				1DCA7CE42B46D8640044DC0B /* TripApiModel.swift in Sources */,
+				1D7F31592B4977BB006D3DC8 /* StopType.swift in Sources */,
 				1D24565D2B48630B00729295 /* PopUpView.swift in Sources */,
 				1DCA7D512B47FD500044DC0B /* RegionCalculator.swift in Sources */,
 				1DCA7D0C2B472A310044DC0B /* ErrorView.swift in Sources */,

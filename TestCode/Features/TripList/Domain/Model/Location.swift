@@ -10,4 +10,5 @@ import Foundation
 struct Location: Annotatable {
     let address: String
     let point: Point
+    let type: StopType
 }

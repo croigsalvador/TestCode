@@ -9,6 +9,10 @@ import Foundation
 
 struct LocationUIModel {
     let location: Location
+   
+    var typeText: String {
+        location.type == .origin ? "Origin" : "Destination"
+    }
     
     var address: String {
         location.address

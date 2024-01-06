@@ -14,16 +14,15 @@ struct StopInfoView: View {
     var body: some View {
         VStack {
             Text("Stop Information")
-                .font(Font.theme.titleFont)
+                .font(Font.theme.highlightFont)
                 .foregroundColor(Color.theme.primaryTextColor)
-                .padding(.bottom, 2)
+                .padding()
                 .frame(alignment: .center)
-            
             VStack {
                 Text(uiModel.address)
-                    .padding()
+                    .padding(4)
                 Text(uiModel.userName)
-                    .padding()
+                    .padding(4)
                 HStack {
                     Text(uiModel.price)
                     Text(uiModel.paid)
@@ -32,7 +31,10 @@ struct StopInfoView: View {
             }.padding(8)
             .font(Font.theme.subtitleFont)
             .foregroundColor(Color.theme.primaryTextColor)
-        }
+        }.cornerRadius(8)
+            .overlay(RoundedRectangle(cornerRadius: 8)
+                .stroke(Color.black.opacity(0.1), lineWidth: 1))
+            .background(Color.theme.primaryBackgroundColor)
     }
 }
 

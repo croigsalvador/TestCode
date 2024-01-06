@@ -16,11 +16,11 @@ struct TripPopUpFactoryView: View {
         case .idle:
             Text("")
         case .error:
-            PopUpView(content: ErrorView(title: "There was an error", subtitle: "Close and try again"), title: "Stop information", showingView: $viewModel.showPopUp)
+            PopUpView(content: ErrorView(title: "There was an error", subtitle: "Close and try again"), title: "Information", showingView: $viewModel.showPopUp)
         case .showStop(let uiModel):
-            PopUpView(content: StopInfoView(uiModel: uiModel), title: "Stop information", showingView:$viewModel.showPopUp)
+            PopUpView(content: StopInfoView(uiModel: uiModel), title: "     Information", showingView:$viewModel.showPopUp)
         case .showLocation(let locationUIModel):
-            PopUpView(content: LocationInfoView(uiModel: locationUIModel).padding(20), title: "Stop information", showingView: $viewModel.showPopUp)
+            PopUpView(content: LocationInfoView(uiModel: locationUIModel).padding(20), title: "Information", showingView: $viewModel.showPopUp)
         }
     }
 }

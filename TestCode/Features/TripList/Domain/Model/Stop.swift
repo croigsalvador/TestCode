@@ -10,4 +10,5 @@ import Foundation
 struct Stop: Annotatable {
     let id: Int?
     let point: Point
+    let type: StopType = .stop
 }
