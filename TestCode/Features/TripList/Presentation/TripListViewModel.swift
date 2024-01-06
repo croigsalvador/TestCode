@@ -15,6 +15,7 @@ final class TripListViewModel: ObservableObject {
     @Published var listState: TripListState
     @Published var mapState: MapViewState
     @Published var popUpState: PopUpViewState
+    @Published var showPopUp: Bool = false
     private var cancellables: Set<AnyCancellable> = []
     private let fetchTrips: FetchTrips
     private let getTripAnotables: GetTripAnnotables
@@ -38,6 +39,12 @@ final class TripListViewModel: ObservableObject {
     }
     
     func onAppear() {
+        for family in UIFont.familyNames {
+            print("\(family)")
+            for names in UIFont.fontNames(forFamilyName: family) {
+                print("== \(names)")
+            }
+        }
         fetchTripList()
     }
     
@@ -76,6 +83,7 @@ final class TripListViewModel: ObservableObject {
         if let stopAnnotation = annotation as? StopAnnotation {
             getInfo(stopAnnotation.stop)
         } else if let locationAnnotation = annotation as? LocationAnnotation {
+            showPopUp = true
             popUpState = .showLocation(LocationUIModel(location: locationAnnotation.location))
         }
     }
@@ -83,14 +91,15 @@ final class TripListViewModel: ObservableObject {
     func getInfo(_ stop: Stop) {
         guard let stopId = stop.id else { return }
         
-        self.popUpState = .loading
         getStopInfo.getInfo(id: stopId)
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 if case .failure = completion {
+                    self?.showPopUp = true 
                     self?.popUpState = .error
                 }
             } receiveValue: { [weak self] stopInfo in
+                self?.showPopUp = true
                 self?.popUpState = .showStop(StopInfoUIModel(stopInfo: stopInfo))
             }.store(in: &cancellables)
 

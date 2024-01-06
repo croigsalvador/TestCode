@@ -10,8 +10,20 @@ import Foundation
 struct StopInfoUIModel {
     
     let stopInfo: StopInfo
+  
+    var address: String {
+        "Address: \(stopInfo.address)"
+    }
+    
+    var paid: String {
+        stopInfo.paid ? "Paid" : "Unpaid"
+    }
+    
+    var price: String {
+        "Price: \(stopInfo.price)€"
+    }
     
     var userName: String {
-        return stopInfo.userName
+        "User: \(stopInfo.userName)"
     }
 }

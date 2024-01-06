@@ -9,7 +9,6 @@ import Foundation
 
 enum PopUpViewState {
     case idle
-    case loading
     case error
     case showStop(StopInfoUIModel)
     case showLocation(LocationUIModel)
@@ -18,7 +17,6 @@ enum PopUpViewState {
 extension PopUpViewState: Equatable {
     static func ==(lhs: PopUpViewState, rhs: PopUpViewState) -> Bool {
         switch (lhs, rhs) {
-        case (.loading, .loading): return true
         case (.idle, .idle): return true
         case (.error, .error): return true
         default:

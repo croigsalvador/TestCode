@@ -17,7 +17,7 @@ struct TripListView: View {
                 MapView(mapState: viewModel.mapState, selectedAnntation: { annotation in
                     viewModel.userDidSelect(annotation: annotation)
                 })
-                    .frame(height: 400)
+                .frame(height: 400)
                 Spacer()
                 GeometryReader { reader in
                     ScrollView {
@@ -31,6 +31,9 @@ struct TripListView: View {
                     .tint(Color.black)
             }).navigationBarTitle("Trips", displayMode: .inline)
                 .onAppear(perform: viewModel.onAppear)
+                .overlay {
+                    TripPopUpFactoryView(viewModel: viewModel)
+                }
         }
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 struct LocationUIModel {
     let location: Location
     
-    var title: String {
+    var address: String {
         location.address
     }
 }

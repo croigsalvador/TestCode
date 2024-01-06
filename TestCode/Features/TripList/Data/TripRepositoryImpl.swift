@@ -28,10 +28,10 @@ class TripRepositoryImpl: TripRepository {
     func getStopInfo(id: Int) -> AnyPublisher<StopInfo, BasicError> {
         return provider.getStopInfo(id: id)
             .tryMap { apiModel -> StopInfo in
-                guard let stopInfo = apiModel.toDomainModel() else {
+//                guard let stopInfo = apiModel.toDomainModel() else {
                     throw BasicError.unknownError 
-                }
-                return stopInfo
+//                }
+//                return stopInfo
             }
             .mapError { _ in .networkError }
             .eraseToAnyPublisher()

@@ -19,6 +19,10 @@
 		1D2456562B484DD200729295 /* LocationUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456552B484DD200729295 /* LocationUIModel.swift */; };
 		1D2456582B4850BD00729295 /* GetStopInfoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456572B4850BD00729295 /* GetStopInfoImpl.swift */; };
 		1D24565A2B485CE600729295 /* StopInfoApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456592B485CE600729295 /* StopInfoApiModel.swift */; };
+		1D24565D2B48630B00729295 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D24565C2B48630B00729295 /* PopUpView.swift */; };
+		1D2456632B48672900729295 /* StopInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2456622B48672900729295 /* StopInfoView.swift */; };
+		1D7F31542B496DF6006D3DC8 /* TripPopUpFactoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31532B496DF6006D3DC8 /* TripPopUpFactoryView.swift */; };
+		1D7F31572B49719A006D3DC8 /* LocationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31562B49719A006D3DC8 /* LocationInfoView.swift */; };
 		1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */; };
 		1DCA7CD52B3EE5890044DC0B /* TripUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */; };
 		1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD62B46D7090044DC0B /* TripRepository.swift */; };
@@ -121,6 +125,10 @@
 		1D2456552B484DD200729295 /* LocationUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUIModel.swift; sourceTree = "<group>"; };
 		1D2456572B4850BD00729295 /* GetStopInfoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStopInfoImpl.swift; sourceTree = "<group>"; };
 		1D2456592B485CE600729295 /* StopInfoApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopInfoApiModel.swift; sourceTree = "<group>"; };
+		1D24565C2B48630B00729295 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		1D2456622B48672900729295 /* StopInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopInfoView.swift; sourceTree = "<group>"; };
+		1D7F31532B496DF6006D3DC8 /* TripPopUpFactoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPopUpFactoryView.swift; sourceTree = "<group>"; };
+		1D7F31562B49719A006D3DC8 /* LocationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoView.swift; sourceTree = "<group>"; };
 		1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicError.swift; sourceTree = "<group>"; };
 		1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripUIModel.swift; sourceTree = "<group>"; };
 		1DCA7CD62B46D7090044DC0B /* TripRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepository.swift; sourceTree = "<group>"; };
@@ -239,6 +247,47 @@
 				1D2456572B4850BD00729295 /* GetStopInfoImpl.swift */,
 			);
 			path = GetStopInfo;
+			sourceTree = "<group>";
+		};
+		1D24565B2B4862FE00729295 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				1D24565C2B48630B00729295 /* PopUpView.swift */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		1D24565E2B4866F200729295 /* StopInfo */ = {
+			isa = PBXGroup;
+			children = (
+				1D2456622B48672900729295 /* StopInfoView.swift */,
+			);
+			path = StopInfo;
+			sourceTree = "<group>";
+		};
+		1D24565F2B4866FD00729295 /* ViewStates */ = {
+			isa = PBXGroup;
+			children = (
+				1D24564F2B4849B200729295 /* PopUpViewState.swift */,
+				1DEDA4E82B3ED65F00A0897A /* TripListViewState.swift */,
+			);
+			path = ViewStates;
+			sourceTree = "<group>";
+		};
+		1D7F31522B496DDE006D3DC8 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F31532B496DF6006D3DC8 /* TripPopUpFactoryView.swift */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		1D7F31552B49718A006D3DC8 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F31562B49719A006D3DC8 /* LocationInfoView.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		1DCA7CD12B3EE49E0044DC0B /* Error */ = {
@@ -547,6 +596,7 @@
 		1DEDA4D42B3EC9ED00A0897A /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				1D24565B2B4862FE00729295 /* PopUp */,
 				1DCA7D462B476BE20044DC0B /* Map */,
 				1DCA7D372B47693B0044DC0B /* TagView */,
 				1DCA7D312B4767E10044DC0B /* ViewModifier */,
@@ -601,6 +651,7 @@
 		1DEDA4E12B3ED56200A0897A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1D24565F2B4866FD00729295 /* ViewStates */,
 				1D24563F2B48190600729295 /* Map */,
 				1DCA7D342B4768BB0044DC0B /* ViewModifier */,
 				1DCA7D0F2B47535C0044DC0B /* Coordinator */,
@@ -614,12 +665,12 @@
 		1DEDA4E62B3ED64300A0897A /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				1DEDA4E82B3ED65F00A0897A /* TripListViewState.swift */,
+				1D7F31552B49718A006D3DC8 /* Location */,
+				1D7F31522B496DDE006D3DC8 /* PopUp */,
+				1D24565E2B4866F200729295 /* StopInfo */,
 				1DCA7D002B4726780044DC0B /* TripListView.swift */,
 				1DCA7D052B4729E40044DC0B /* TripListFactoryView.swift */,
 				1DCA7D0D2B472B2C0044DC0B /* TripElementView.swift */,
-				1D24564F2B4849B200729295 /* PopUpViewState.swift */,
-				1D2456552B484DD200729295 /* LocationUIModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -627,6 +678,7 @@
 		1DEDA4E72B3ED64C00A0897A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1D2456552B484DD200729295 /* LocationUIModel.swift */,
 				1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */,
 				1DCA7D3C2B4769CD0044DC0B /* TripStatus.swift */,
 				1D2456532B484D8B00729295 /* StopInfoUIModel.swift */,
@@ -844,8 +896,10 @@
 				1DCA7D582B4802FA0044DC0B /* MapPolylineOverlay.swift in Sources */,
 				1DCA7D012B4726780044DC0B /* TripListView.swift in Sources */,
 				1D2456452B48203A00729295 /* CustomAnnotationFactory.swift in Sources */,
+				1D7F31542B496DF6006D3DC8 /* TripPopUpFactoryView.swift in Sources */,
 				1DCA7D182B4759B30044DC0B /* Location.swift in Sources */,
 				1DCA7CF12B4723940044DC0B /* TripRouter.swift in Sources */,
+				1D7F31572B49719A006D3DC8 /* LocationInfoView.swift in Sources */,
 				1DCA7CF32B4724190044DC0B /* TripNetworkProviderImpl.swift in Sources */,
 				1DEDA4E32B3ED57F00A0897A /* TripListViewModel.swift in Sources */,
 				1DCA7CF72B4725670044DC0B /* Coordinator.swift in Sources */,
@@ -853,6 +907,7 @@
 				1DEDA4F82B3EE21A00A0897A /* Publisher+Utils.swift in Sources */,
 				1DCA7D302B4767250044DC0B /* Theme.swift in Sources */,
 				1DCA7CE42B46D8640044DC0B /* TripApiModel.swift in Sources */,
+				1D24565D2B48630B00729295 /* PopUpView.swift in Sources */,
 				1DCA7D512B47FD500044DC0B /* RegionCalculator.swift in Sources */,
 				1DCA7D0C2B472A310044DC0B /* ErrorView.swift in Sources */,
 				1DCA7D602B480D170044DC0B /* GetTripAnnotablesImpl.swift in Sources */,
@@ -889,6 +944,7 @@
 				1DCA7D392B4769460044DC0B /* TagView.swift in Sources */,
 				1D2456562B484DD200729295 /* LocationUIModel.swift in Sources */,
 				1DCA7D362B4768C40044DC0B /* TripViewModifier.swift in Sources */,
+				1D2456632B48672900729295 /* StopInfoView.swift in Sources */,
 				1DCA7D1A2B4759B80044DC0B /* Point.swift in Sources */,
 				1DEDA4A52B3EC1BA00A0897A /* SceneDelegate.swift in Sources */,
 				1DCA7D222B475D310044DC0B /* PointApiModel.swift in Sources */,

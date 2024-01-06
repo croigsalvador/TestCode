@@ -13,6 +13,9 @@ protocol Theme {
     var primaryTextColor: Color {get}
     var secondaryTextColor: Color {get}
     
+    var errorTitleTextColor: Color {get}
+    var errorSubtitleTextColor: Color {get}
+    
     var titleFont: Font {get}
     var subtitleFont: Font {get}
     var highlightFont: Font {get}
@@ -26,16 +29,16 @@ extension Theme {
         Font.defaultRegularFontWithSize(size: 14.0)
     }
     var highlightFont: Font {
-        Font.defaultRegularFontWithSize(size: 14.0)
+        Font.defaultSemiBoldFontWithSize(size: 14.0)
     }
 }
 
 extension Color {
-    static let theme = MainTheme()
+    static let theme: Theme = MainTheme()
 }
 
 extension Font {
-    static let theme = MainTheme()
+    static let theme: Theme = MainTheme()
     
     static func defaultBoldFontWithSize(size: CGFloat) -> Font {
         return Font.custom("Montserrat-Bold", size: size)

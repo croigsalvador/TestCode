@@ -29,4 +29,18 @@ final class DeveloperInstances {
     var tripProvider: TripNetworkProvider {
         TripNetworkProviderImpl(session: URLSession.shared)
     }
+    
+    var stopInfoApiModel: StopInfoApiModel {
+        return StopInfoApiModel(
+            price: 1.5,
+            address: "Ramblas, Barcelona",
+            tripId: 1,
+            paid: true,
+            stopTime: "2018-12-18T08:10:00.000Z",
+            point: PointApiModel(latitude: 41.37653, longitude: 2.17924),
+            userName: "Manuel Gomez"
+        )
+    }
 }
+
+

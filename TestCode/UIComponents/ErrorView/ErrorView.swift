@@ -15,11 +15,37 @@ struct ErrorView: View {
     var body: some View {
         VStack {
             Text(title)
+                .errorTitleModifier()
             Divider()
                 .padding(8)
             Text(subtitle)
+                .errorSubtitleModifier()
                 .multilineTextAlignment(.center)
         }.padding(30)
     }
 }
 
+extension View {
+
+    func errorTitleModifier() -> some View {
+        self.modifier(ErrorTitleModifier())
+    }
+    
+    func errorSubtitleModifier() -> some View {
+        self.modifier(ErrorSubtitleModifier())
+    }
+}
+
+struct ErrorTitleModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content.foregroundColor(Color.theme.errorSubtitleTextColor)
+            .font(Font.theme.highlightFont )
+    }
+}
+
+struct ErrorSubtitleModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content.foregroundColor(Color.theme.errorSubtitleTextColor)
+            .font(Font.theme.highlightFont )
+    }
+}

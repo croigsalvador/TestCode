@@ -9,6 +9,9 @@ import SwiftUI
 
 struct MainTheme: Theme {
     let primaryBackgroundColor: Color = ColorPalette.lightGreyTwo.color
-    let primaryTextColor: Color = ColorPalette.darkSlate.color
-    let secondaryTextColor: Color  = ColorPalette.darkSlateLight.color
+    let primaryTextColor: Color = ColorPalette.greyOne.color
+    let secondaryTextColor: Color  = ColorPalette.greyThree.color
+    
+    let errorTitleTextColor: Color = ColorPalette.greyOne.color
+    let errorSubtitleTextColor: Color  = ColorPalette.greyTwo.color
 }
