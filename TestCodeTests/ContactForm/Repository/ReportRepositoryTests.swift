@@ -10,17 +10,16 @@ import XCTest
 
 final class ReportRepositoryTests: XCTestCase {
 
-    var sut: ReportRepositoryImpl<InMemoryCacheMock<Report>>!
-    var cacheMock: InMemoryCacheMock<Report>!
+    var sut: ReportRepositoryImpl<ReportUserDefaultsCacheMock<ReportDataModel>>!
+    var cacheMock:  ReportUserDefaultsCacheMock<ReportDataModel>!
     
     override func setUpWithError() throws {
-        cacheMock = InMemoryCacheMock<Report>()
+        cacheMock = ReportUserDefaultsCacheMock<ReportDataModel>()
         sut = ReportRepositoryImpl(cache: cacheMock)
     }
     
     func test_saveReportShouldCallCacheSaveMethod() {
         let report = Report(name: "Test", surname: "Surname", email: "test@test.com", phone: nil, description: "This is a description", date: Date())
-        cacheMock.values = [report]
         
         sut.save(report)
                 

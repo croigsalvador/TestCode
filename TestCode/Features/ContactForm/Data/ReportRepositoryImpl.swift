@@ -16,6 +16,6 @@ final class ReportRepositoryImpl<Cache:CacheProtocol>: ReportRepostory {
     }
     
     func save(_ report: Report) {
-        cache.saveValue(report as! Cache.Value)
+        cache.saveValue(report.toDataModel() as! Cache.Value)
     }
 }

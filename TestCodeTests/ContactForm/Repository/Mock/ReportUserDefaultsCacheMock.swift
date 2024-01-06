@@ -1,5 +1,5 @@
 //
-//  InMemoryCacheMock.swift
+//  ReportUserDefaultsCacheMock.swift
 //  TestCodeTests
 //
 //  Created by Carlos Roig Salvador on 6/1/24.
@@ -8,7 +8,7 @@
 import Foundation
 @testable import TestCode
 
-final class InMemoryCacheMock<Value>: CacheProtocol{
+final class ReportUserDefaultsCacheMock<Value>: CacheProtocol {
     
     var saveWasCalled = false
     var values: [Value]?
