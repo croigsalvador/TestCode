@@ -24,6 +24,11 @@
 		1D7F31542B496DF6006D3DC8 /* TripPopUpFactoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31532B496DF6006D3DC8 /* TripPopUpFactoryView.swift */; };
 		1D7F31572B49719A006D3DC8 /* LocationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31562B49719A006D3DC8 /* LocationInfoView.swift */; };
 		1D7F31592B4977BB006D3DC8 /* StopType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31582B4977BB006D3DC8 /* StopType.swift */; };
+		1D7F31652B499DED006D3DC8 /* ContactFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31642B499DED006D3DC8 /* ContactFormViewModel.swift */; };
+		1D7F31692B499E93006D3DC8 /* ContactFormViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31682B499E93006D3DC8 /* ContactFormViewModelTests.swift */; };
+		1D7F316B2B499FC2006D3DC8 /* SaveReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F316A2B499FC2006D3DC8 /* SaveReport.swift */; };
+		1D7F316D2B499FE5006D3DC8 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F316C2B499FE5006D3DC8 /* Report.swift */; };
+		1D7F31702B49A121006D3DC8 /* SaveReportMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F316F2B49A121006D3DC8 /* SaveReportMock.swift */; };
 		1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */; };
 		1DCA7CD52B3EE5890044DC0B /* TripUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */; };
 		1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD62B46D7090044DC0B /* TripRepository.swift */; };
@@ -131,6 +136,11 @@
 		1D7F31532B496DF6006D3DC8 /* TripPopUpFactoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPopUpFactoryView.swift; sourceTree = "<group>"; };
 		1D7F31562B49719A006D3DC8 /* LocationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoView.swift; sourceTree = "<group>"; };
 		1D7F31582B4977BB006D3DC8 /* StopType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopType.swift; sourceTree = "<group>"; };
+		1D7F31642B499DED006D3DC8 /* ContactFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModel.swift; sourceTree = "<group>"; };
+		1D7F31682B499E93006D3DC8 /* ContactFormViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModelTests.swift; sourceTree = "<group>"; };
+		1D7F316A2B499FC2006D3DC8 /* SaveReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveReport.swift; sourceTree = "<group>"; };
+		1D7F316C2B499FE5006D3DC8 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		1D7F316F2B49A121006D3DC8 /* SaveReportMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveReportMock.swift; sourceTree = "<group>"; };
 		1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicError.swift; sourceTree = "<group>"; };
 		1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripUIModel.swift; sourceTree = "<group>"; };
 		1DCA7CD62B46D7090044DC0B /* TripRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepository.swift; sourceTree = "<group>"; };
@@ -290,6 +300,97 @@
 				1D7F31562B49719A006D3DC8 /* LocationInfoView.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		1D7F315A2B499CE7006D3DC8 /* ContactForm */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F315D2B499D03006D3DC8 /* Data */,
+				1D7F315C2B499CFC006D3DC8 /* Domain */,
+				1D7F315B2B499CF4006D3DC8 /* Presentation */,
+			);
+			path = ContactForm;
+			sourceTree = "<group>";
+		};
+		1D7F315B2B499CF4006D3DC8 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F31632B499D2A006D3DC8 /* UI */,
+				1D7F31622B499D22006D3DC8 /* Model */,
+				1D7F31642B499DED006D3DC8 /* ContactFormViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1D7F315C2B499CFC006D3DC8 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F31612B499D1B006D3DC8 /* UseCase */,
+				1D7F31602B499D13006D3DC8 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1D7F315D2B499D03006D3DC8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1D7F31602B499D13006D3DC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F316C2B499FE5006D3DC8 /* Report.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D7F31612B499D1B006D3DC8 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F316A2B499FC2006D3DC8 /* SaveReport.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		1D7F31622B499D22006D3DC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D7F31632B499D2A006D3DC8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1D7F31662B499E17006D3DC8 /* ContactForm */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F31672B499E20006D3DC8 /* ViewModel */,
+			);
+			path = ContactForm;
+			sourceTree = "<group>";
+		};
+		1D7F31672B499E20006D3DC8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F316E2B49A111006D3DC8 /* Mock */,
+				1D7F31682B499E93006D3DC8 /* ContactFormViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D7F316E2B49A111006D3DC8 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F316F2B49A121006D3DC8 /* SaveReportMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		1DCA7CD12B3EE49E0044DC0B /* Error */ = {
@@ -562,6 +663,7 @@
 		1DEDA4B82B3EC1BB00A0897A /* TestCodeTests */ = {
 			isa = PBXGroup;
 			children = (
+				1D7F31662B499E17006D3DC8 /* ContactForm */,
 				1DCA7D162B4757500044DC0B /* TripList */,
 			);
 			path = TestCodeTests;
@@ -614,6 +716,7 @@
 		1DEDA4D52B3EC9F900A0897A /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				1D7F315A2B499CE7006D3DC8 /* ContactForm */,
 				1DEDA4E02B3ED55800A0897A /* TripList */,
 			);
 			path = Features;
@@ -892,12 +995,14 @@
 				1DCA7D562B47FF810044DC0B /* GetTripLocations.swift in Sources */,
 				1D2456472B48247800729295 /* Annotable.swift in Sources */,
 				1DCA7D5A2B480A220044DC0B /* MapViewState.swift in Sources */,
+				1D7F316B2B499FC2006D3DC8 /* SaveReport.swift in Sources */,
 				1DCA7CD92B46D7310044DC0B /* FetchTripsImpl.swift in Sources */,
 				1DCA7D3D2B4769CD0044DC0B /* TripStatus.swift in Sources */,
 				1DCA7D042B4726AD0044DC0B /* DeveloperInstances.swift in Sources */,
 				1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */,
 				1DCA7D582B4802FA0044DC0B /* MapPolylineOverlay.swift in Sources */,
 				1DCA7D012B4726780044DC0B /* TripListView.swift in Sources */,
+				1D7F316D2B499FE5006D3DC8 /* Report.swift in Sources */,
 				1D2456452B48203A00729295 /* CustomAnnotationFactory.swift in Sources */,
 				1D7F31542B496DF6006D3DC8 /* TripPopUpFactoryView.swift in Sources */,
 				1DCA7D182B4759B30044DC0B /* Location.swift in Sources */,
@@ -912,6 +1017,7 @@
 				1DCA7CE42B46D8640044DC0B /* TripApiModel.swift in Sources */,
 				1D7F31592B4977BB006D3DC8 /* StopType.swift in Sources */,
 				1D24565D2B48630B00729295 /* PopUpView.swift in Sources */,
+				1D7F31652B499DED006D3DC8 /* ContactFormViewModel.swift in Sources */,
 				1DCA7D512B47FD500044DC0B /* RegionCalculator.swift in Sources */,
 				1DCA7D0C2B472A310044DC0B /* ErrorView.swift in Sources */,
 				1DCA7D602B480D170044DC0B /* GetTripAnnotablesImpl.swift in Sources */,
@@ -961,11 +1067,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7F31702B49A121006D3DC8 /* SaveReportMock.swift in Sources */,
 				1D24564E2B4847B200729295 /* GetStopInfoMock.swift in Sources */,
 				1DEDA4E52B3ED5C000A0897A /* TripListViewModelTests.swift in Sources */,
 				1DCA7D242B475E350044DC0B /* TripApiModelMock.swift in Sources */,
 				1DCA7D5C2B480CAE0044DC0B /* GetTripLocationsMock.swift in Sources */,
 				1DCA7CDD2B46D7ED0044DC0B /* TripNetworkProviderMock.swift in Sources */,
+				1D7F31692B499E93006D3DC8 /* ContactFormViewModelTests.swift in Sources */,
 				1DCA7D622B480DA30044DC0B /* RegionCalculatorMock.swift in Sources */,
 				1DCA7CE62B46D8D80044DC0B /* TripRepositoryTests.swift in Sources */,
 				1DCA7D262B475F220044DC0B /* TripMock.swift in Sources */,
