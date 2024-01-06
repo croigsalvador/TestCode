@@ -13,4 +13,5 @@ struct Report {
     let email: String
     let phone: String?
     let description: String
+    let date: Date
 }
