@@ -17,6 +17,7 @@ class ContactFormViewModel: ObservableObject {
     init(viewState: ContactFormViewState, saveReport: SaveReport) {
         self.viewState = viewState
         self.saveReport = saveReport
+        setupSubscribers()
         
     }
     

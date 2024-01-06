@@ -12,20 +12,23 @@ import Combine
 final class ContactFormViewModelTests: XCTestCase {
     
     private var cancellables: Set<AnyCancellable> = []
+    var viewStateMock: ContactFormViewStateMock!
     var saveReportMock: SaveReportMock!
     var sut: ContactFormViewModel!
 
     override func setUpWithError() throws {
+        viewStateMock = ContactFormViewStateMock()
         saveReportMock = SaveReportMock()
-        sut = ContactFormViewModel(saveReport: saveReportMock)
+        sut = ContactFormViewModel(viewState: viewStateMock, saveReport: saveReportMock)
     }
 
     override func tearDownWithError() throws {
         sut = nil
     }
 
-
     func test_saveReportShouldBeCalled() {
+        viewStateMock.nextStepEnabled = true
+        
         sut.send()
         
         XCTAssertTrue(saveReportMock.reportSaved)

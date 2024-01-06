@@ -30,6 +30,13 @@
 		1D7F316D2B499FE5006D3DC8 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F316C2B499FE5006D3DC8 /* Report.swift */; };
 		1D7F31702B49A121006D3DC8 /* SaveReportMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F316F2B49A121006D3DC8 /* SaveReportMock.swift */; };
 		1D7F31722B49A28A006D3DC8 /* ContactFormViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31712B49A28A006D3DC8 /* ContactFormViewState.swift */; };
+		1D7F31762B49A6AE006D3DC8 /* ReportRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31752B49A6AE006D3DC8 /* ReportRepositoryTests.swift */; };
+		1D7F31782B49A6C5006D3DC8 /* ReportRepositort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31772B49A6C5006D3DC8 /* ReportRepositort.swift */; };
+		1D7F317A2B49A6CF006D3DC8 /* ReportRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31792B49A6CF006D3DC8 /* ReportRepositoryImpl.swift */; };
+		1D7F317E2B49A729006D3DC8 /* InMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F317C2B49A729006D3DC8 /* InMemoryCache.swift */; };
+		1D7F317F2B49A729006D3DC8 /* CacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F317D2B49A729006D3DC8 /* CacheProtocol.swift */; };
+		1D7F31812B49A7B9006D3DC8 /* InMemoryCacheMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31802B49A7B9006D3DC8 /* InMemoryCacheMock.swift */; };
+		1D7F31832B49A8A5006D3DC8 /* ContactFormViewStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31822B49A8A5006D3DC8 /* ContactFormViewStateMock.swift */; };
 		1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */; };
 		1DCA7CD52B3EE5890044DC0B /* TripUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */; };
 		1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD62B46D7090044DC0B /* TripRepository.swift */; };
@@ -143,6 +150,13 @@
 		1D7F316C2B499FE5006D3DC8 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		1D7F316F2B49A121006D3DC8 /* SaveReportMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveReportMock.swift; sourceTree = "<group>"; };
 		1D7F31712B49A28A006D3DC8 /* ContactFormViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewState.swift; sourceTree = "<group>"; };
+		1D7F31752B49A6AE006D3DC8 /* ReportRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportRepositoryTests.swift; sourceTree = "<group>"; };
+		1D7F31772B49A6C5006D3DC8 /* ReportRepositort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportRepositort.swift; sourceTree = "<group>"; };
+		1D7F31792B49A6CF006D3DC8 /* ReportRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportRepositoryImpl.swift; sourceTree = "<group>"; };
+		1D7F317C2B49A729006D3DC8 /* InMemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InMemoryCache.swift; sourceTree = "<group>"; };
+		1D7F317D2B49A729006D3DC8 /* CacheProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheProtocol.swift; sourceTree = "<group>"; };
+		1D7F31802B49A7B9006D3DC8 /* InMemoryCacheMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryCacheMock.swift; sourceTree = "<group>"; };
+		1D7F31822B49A8A5006D3DC8 /* ContactFormViewStateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewStateMock.swift; sourceTree = "<group>"; };
 		1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicError.swift; sourceTree = "<group>"; };
 		1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripUIModel.swift; sourceTree = "<group>"; };
 		1DCA7CD62B46D7090044DC0B /* TripRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepository.swift; sourceTree = "<group>"; };
@@ -329,6 +343,7 @@
 			children = (
 				1D7F31612B499D1B006D3DC8 /* UseCase */,
 				1D7F31602B499D13006D3DC8 /* Model */,
+				1D7F31772B49A6C5006D3DC8 /* ReportRepositort.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -336,6 +351,7 @@
 		1D7F315D2B499D03006D3DC8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1D7F31792B49A6CF006D3DC8 /* ReportRepositoryImpl.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -374,6 +390,7 @@
 		1D7F31662B499E17006D3DC8 /* ContactForm */ = {
 			isa = PBXGroup;
 			children = (
+				1D7F31732B49A68B006D3DC8 /* Repository */,
 				1D7F31672B499E20006D3DC8 /* ViewModel */,
 			);
 			path = ContactForm;
@@ -392,8 +409,35 @@
 			isa = PBXGroup;
 			children = (
 				1D7F316F2B49A121006D3DC8 /* SaveReportMock.swift */,
+				1D7F31822B49A8A5006D3DC8 /* ContactFormViewStateMock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		1D7F31732B49A68B006D3DC8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F31742B49A693006D3DC8 /* Mock */,
+				1D7F31752B49A6AE006D3DC8 /* ReportRepositoryTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		1D7F31742B49A693006D3DC8 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F31802B49A7B9006D3DC8 /* InMemoryCacheMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		1D7F317B2B49A729006D3DC8 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F317C2B49A729006D3DC8 /* InMemoryCache.swift */,
+				1D7F317D2B49A729006D3DC8 /* CacheProtocol.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		1DCA7CD12B3EE49E0044DC0B /* Error */ = {
@@ -692,6 +736,7 @@
 		1DEDA4D32B3EC9E600A0897A /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1D7F317B2B49A729006D3DC8 /* Cache */,
 				1DCA7D022B4726AD0044DC0B /* Dependencies */,
 				1DCA7CF52B4725370044DC0B /* Coordinator */,
 				1DCA7CD12B3EE49E0044DC0B /* Error */,
@@ -1004,11 +1049,13 @@
 				1DCA7D042B4726AD0044DC0B /* DeveloperInstances.swift in Sources */,
 				1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */,
 				1DCA7D582B4802FA0044DC0B /* MapPolylineOverlay.swift in Sources */,
+				1D7F317A2B49A6CF006D3DC8 /* ReportRepositoryImpl.swift in Sources */,
 				1DCA7D012B4726780044DC0B /* TripListView.swift in Sources */,
 				1D7F316D2B499FE5006D3DC8 /* Report.swift in Sources */,
 				1D2456452B48203A00729295 /* CustomAnnotationFactory.swift in Sources */,
 				1D7F31542B496DF6006D3DC8 /* TripPopUpFactoryView.swift in Sources */,
 				1DCA7D182B4759B30044DC0B /* Location.swift in Sources */,
+				1D7F31782B49A6C5006D3DC8 /* ReportRepositort.swift in Sources */,
 				1DCA7CF12B4723940044DC0B /* TripRouter.swift in Sources */,
 				1D7F31572B49719A006D3DC8 /* LocationInfoView.swift in Sources */,
 				1D7F31722B49A28A006D3DC8 /* ContactFormViewState.swift in Sources */,
@@ -1030,6 +1077,7 @@
 				1DCA7D452B476BDA0044DC0B /* MapView.swift in Sources */,
 				1D2456582B4850BD00729295 /* GetStopInfoImpl.swift in Sources */,
 				1D2456412B48191A00729295 /* StopAnnotation.swift in Sources */,
+				1D7F317F2B49A729006D3DC8 /* CacheProtocol.swift in Sources */,
 				1DCA7D1C2B4759BD0044DC0B /* Stop.swift in Sources */,
 				1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */,
 				1DCA7D112B47536A0044DC0B /* TripListCoordinator.swift in Sources */,
@@ -1053,6 +1101,7 @@
 				1DCA7D062B4729E40044DC0B /* TripListFactoryView.swift in Sources */,
 				1DCA7CF92B47257C0044DC0B /* ApplicationCoordinator.swift in Sources */,
 				1DCA7D282B4765C40044DC0B /* Date+String.swift in Sources */,
+				1D7F317E2B49A729006D3DC8 /* InMemoryCache.swift in Sources */,
 				1DCA7D2F2B4767250044DC0B /* MainTheme.swift in Sources */,
 				1DCA7CED2B471DFD0044DC0B /* String+Date.swift in Sources */,
 				1DCA7D392B4769460044DC0B /* TagView.swift in Sources */,
@@ -1072,6 +1121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D7F31702B49A121006D3DC8 /* SaveReportMock.swift in Sources */,
+				1D7F31762B49A6AE006D3DC8 /* ReportRepositoryTests.swift in Sources */,
 				1D24564E2B4847B200729295 /* GetStopInfoMock.swift in Sources */,
 				1DEDA4E52B3ED5C000A0897A /* TripListViewModelTests.swift in Sources */,
 				1DCA7D242B475E350044DC0B /* TripApiModelMock.swift in Sources */,
@@ -1083,7 +1133,9 @@
 				1DCA7D262B475F220044DC0B /* TripMock.swift in Sources */,
 				1DEDA4F52B3EDE5C00A0897A /* FetchTripsMock.swift in Sources */,
 				1DCA7D642B48104B0044DC0B /* MapStateMock.swift in Sources */,
+				1D7F31812B49A7B9006D3DC8 /* InMemoryCacheMock.swift in Sources */,
 				1DCA7D142B47551E0044DC0B /* TripListCoordinatorTests.swift in Sources */,
+				1D7F31832B49A8A5006D3DC8 /* ContactFormViewStateMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
