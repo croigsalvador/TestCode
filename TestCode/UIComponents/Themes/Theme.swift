@@ -15,10 +15,14 @@ protocol Theme {
     
     var errorTitleTextColor: Color {get}
     var errorSubtitleTextColor: Color {get}
+    var textFieldErrorColor: Color {get}
     
     var titleFont: Font {get}
     var subtitleFont: Font {get}
     var highlightFont: Font {get}
+    var textfieldFont: Font {get}
+    var topTitleTextFieldFont: Font {get} 
+
 }
 
 extension Theme {

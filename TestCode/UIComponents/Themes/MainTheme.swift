@@ -14,4 +14,9 @@ struct MainTheme: Theme {
     
     let errorTitleTextColor: Color = ColorPalette.greyOne.color
     let errorSubtitleTextColor: Color  = ColorPalette.greyTwo.color
+    let textFieldErrorColor = ColorPalette.salsaRed.color
+    
+    let textfieldFont = Font.defaultMediumFontWithSize(size: 16)
+    let topTitleTextFieldFont = Font.defaultBoldFontWithSize(size: 16)
+
 }

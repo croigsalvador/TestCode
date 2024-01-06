@@ -16,7 +16,7 @@ struct SaveReportImpl: SaveReport {
     }
     
     func save(_ report: Report) {
-        
+        repository.save(report)
     }
     
 }

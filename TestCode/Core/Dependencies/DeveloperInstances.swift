@@ -41,6 +41,22 @@ final class DeveloperInstances {
             userName: "Manuel Gomez"
         )
     }
+    
+    var contactFormViewModel: ContactFormViewModel {
+        ContactFormViewModel(viewState: ContactFormViewState(), saveReport: saveReport)
+    }
+    
+    var saveReport: SaveReport {
+        SaveReportImpl(reportRepository)
+    }
+    
+    var reportRepository: ReportRepostory {
+        ReportRepositoryImpl(cache: cache)
+    }
+    
+    var cache: ReportUserDefaultsCache<ReportDataModel> {
+        ReportUserDefaultsCache<ReportDataModel>(userDefaults: UserDefaults.standard)
+    }
 }
 
 

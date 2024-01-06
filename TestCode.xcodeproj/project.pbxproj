@@ -36,10 +36,15 @@
 		1D7F317F2B49A729006D3DC8 /* CacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F317D2B49A729006D3DC8 /* CacheProtocol.swift */; };
 		1D7F31832B49A8A5006D3DC8 /* ContactFormViewStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31822B49A8A5006D3DC8 /* ContactFormViewStateMock.swift */; };
 		1D7F31852B49AA6A006D3DC8 /* SaveReportImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31842B49AA69006D3DC8 /* SaveReportImpl.swift */; };
-		1D7F31872B49ADC8006D3DC8 /* UserDefaultsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31862B49ADC8006D3DC8 /* UserDefaultsCache.swift */; };
+		1D7F31872B49ADC8006D3DC8 /* ReportUserDefaultsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31862B49ADC8006D3DC8 /* ReportUserDefaultsCache.swift */; };
 		1D7F318B2B49AF50006D3DC8 /* ReportDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F318A2B49AF50006D3DC8 /* ReportDataModel.swift */; };
 		1D7F318D2B49B2D4006D3DC8 /* ReportUserDefaultsCacheMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F318C2B49B2D4006D3DC8 /* ReportUserDefaultsCacheMock.swift */; };
 		1D7F31902B49B468006D3DC8 /* ReportCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F318F2B49B468006D3DC8 /* ReportCoordinator.swift */; };
+		1D7F31932B49BF4E006D3DC8 /* TitleTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31922B49BF4E006D3DC8 /* TitleTextfieldView.swift */; };
+		1D7F31972B49C184006D3DC8 /* ContactFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31962B49C184006D3DC8 /* ContactFormView.swift */; };
+		1D7F31992B49C43B006D3DC8 /* CTAButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31982B49C43B006D3DC8 /* CTAButtonView.swift */; };
+		1D7F319C2B49C45B006D3DC8 /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F319B2B49C45B006D3DC8 /* ButtonType.swift */; };
+		1D7F319F2B49C580006D3DC8 /* TitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F319E2B49C580006D3DC8 /* TitleTextView.swift */; };
 		1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */; };
 		1DCA7CD52B3EE5890044DC0B /* TripUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */; };
 		1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD62B46D7090044DC0B /* TripRepository.swift */; };
@@ -159,10 +164,15 @@
 		1D7F317D2B49A729006D3DC8 /* CacheProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheProtocol.swift; sourceTree = "<group>"; };
 		1D7F31822B49A8A5006D3DC8 /* ContactFormViewStateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewStateMock.swift; sourceTree = "<group>"; };
 		1D7F31842B49AA69006D3DC8 /* SaveReportImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveReportImpl.swift; sourceTree = "<group>"; };
-		1D7F31862B49ADC8006D3DC8 /* UserDefaultsCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsCache.swift; sourceTree = "<group>"; };
+		1D7F31862B49ADC8006D3DC8 /* ReportUserDefaultsCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportUserDefaultsCache.swift; sourceTree = "<group>"; };
 		1D7F318A2B49AF50006D3DC8 /* ReportDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportDataModel.swift; sourceTree = "<group>"; };
 		1D7F318C2B49B2D4006D3DC8 /* ReportUserDefaultsCacheMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportUserDefaultsCacheMock.swift; sourceTree = "<group>"; };
 		1D7F318F2B49B468006D3DC8 /* ReportCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCoordinator.swift; sourceTree = "<group>"; };
+		1D7F31922B49BF4E006D3DC8 /* TitleTextfieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTextfieldView.swift; sourceTree = "<group>"; };
+		1D7F31962B49C184006D3DC8 /* ContactFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormView.swift; sourceTree = "<group>"; };
+		1D7F31982B49C43B006D3DC8 /* CTAButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButtonView.swift; sourceTree = "<group>"; };
+		1D7F319B2B49C45B006D3DC8 /* ButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
+		1D7F319E2B49C580006D3DC8 /* TitleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextView.swift; sourceTree = "<group>"; };
 		1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicError.swift; sourceTree = "<group>"; };
 		1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripUIModel.swift; sourceTree = "<group>"; };
 		1DCA7CD62B46D7090044DC0B /* TripRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepository.swift; sourceTree = "<group>"; };
@@ -393,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				1D7F31712B49A28A006D3DC8 /* ContactFormViewState.swift */,
+				1D7F31962B49C184006D3DC8 /* ContactFormView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -460,7 +471,7 @@
 		1D7F31892B49AF43006D3DC8 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
-				1D7F31862B49ADC8006D3DC8 /* UserDefaultsCache.swift */,
+				1D7F31862B49ADC8006D3DC8 /* ReportUserDefaultsCache.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -471,6 +482,31 @@
 				1D7F318F2B49B468006D3DC8 /* ReportCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1D7F31912B49BF2F006D3DC8 /* TitleTextField */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F31922B49BF4E006D3DC8 /* TitleTextfieldView.swift */,
+			);
+			path = TitleTextField;
+			sourceTree = "<group>";
+		};
+		1D7F319A2B49C44D006D3DC8 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F31982B49C43B006D3DC8 /* CTAButtonView.swift */,
+				1D7F319B2B49C45B006D3DC8 /* ButtonType.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		1D7F319D2B49C571006D3DC8 /* TitleTextView */ = {
+			isa = PBXGroup;
+			children = (
+				1D7F319E2B49C580006D3DC8 /* TitleTextView.swift */,
+			);
+			path = TitleTextView;
 			sourceTree = "<group>";
 		};
 		1DCA7CD12B3EE49E0044DC0B /* Error */ = {
@@ -781,6 +817,8 @@
 		1DEDA4D42B3EC9ED00A0897A /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				1D7F319D2B49C571006D3DC8 /* TitleTextView */,
+				1D7F31912B49BF2F006D3DC8 /* TitleTextField */,
 				1D24565B2B4862FE00729295 /* PopUp */,
 				1DCA7D462B476BE20044DC0B /* Map */,
 				1DCA7D372B47693B0044DC0B /* TagView */,
@@ -790,6 +828,7 @@
 				1DCA7D092B472A310044DC0B /* ErrorView */,
 				1DCA7D072B472A300044DC0B /* ProgressView */,
 				1DCA7CFA2B47259E0044DC0B /* HostingController */,
+				1D7F319A2B49C44D006D3DC8 /* Button */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -1092,13 +1131,16 @@
 				1DCA7CF12B4723940044DC0B /* TripRouter.swift in Sources */,
 				1D7F31572B49719A006D3DC8 /* LocationInfoView.swift in Sources */,
 				1D7F31722B49A28A006D3DC8 /* ContactFormViewState.swift in Sources */,
+				1D7F319C2B49C45B006D3DC8 /* ButtonType.swift in Sources */,
 				1DCA7CF32B4724190044DC0B /* TripNetworkProviderImpl.swift in Sources */,
 				1DEDA4E32B3ED57F00A0897A /* TripListViewModel.swift in Sources */,
 				1DCA7CF72B4725670044DC0B /* Coordinator.swift in Sources */,
 				1DCA7D2E2B4767250044DC0B /* ColorPalette.swift in Sources */,
 				1DEDA4F82B3EE21A00A0897A /* Publisher+Utils.swift in Sources */,
 				1DCA7D302B4767250044DC0B /* Theme.swift in Sources */,
+				1D7F31992B49C43B006D3DC8 /* CTAButtonView.swift in Sources */,
 				1DCA7CE42B46D8640044DC0B /* TripApiModel.swift in Sources */,
+				1D7F31932B49BF4E006D3DC8 /* TitleTextfieldView.swift in Sources */,
 				1D7F31592B4977BB006D3DC8 /* StopType.swift in Sources */,
 				1D24565D2B48630B00729295 /* PopUpView.swift in Sources */,
 				1D7F31652B499DED006D3DC8 /* ContactFormViewModel.swift in Sources */,
@@ -1108,7 +1150,7 @@
 				1DCA7CE12B46D8300044DC0B /* TripNetworkProvider.swift in Sources */,
 				1D2456542B484D8B00729295 /* StopInfoUIModel.swift in Sources */,
 				1DCA7D452B476BDA0044DC0B /* MapView.swift in Sources */,
-				1D7F31872B49ADC8006D3DC8 /* UserDefaultsCache.swift in Sources */,
+				1D7F31872B49ADC8006D3DC8 /* ReportUserDefaultsCache.swift in Sources */,
 				1D2456582B4850BD00729295 /* GetStopInfoImpl.swift in Sources */,
 				1D2456412B48191A00729295 /* StopAnnotation.swift in Sources */,
 				1D7F31902B49B468006D3DC8 /* ReportCoordinator.swift in Sources */,
@@ -1126,9 +1168,11 @@
 				1DCA7D3B2B4769510044DC0B /* Tag.swift in Sources */,
 				1DCA7D422B476B9B0044DC0B /* CustomPointAnnotation.swift in Sources */,
 				1DCA7D1E2B475D090044DC0B /* LocationApiModel.swift in Sources */,
+				1D7F319F2B49C580006D3DC8 /* TitleTextView.swift in Sources */,
 				1D24564C2B482C2800729295 /* StopInfo.swift in Sources */,
 				1D24564A2B482BFC00729295 /* GetStopInfo.swift in Sources */,
 				1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */,
+				1D7F31972B49C184006D3DC8 /* ContactFormView.swift in Sources */,
 				1DCA7CE82B46D92D0044DC0B /* TripRepositoryImpl.swift in Sources */,
 				1DCA7D5E2B480CEE0044DC0B /* RegionCalculatorImpl.swift in Sources */,
 				1D2456502B4849B200729295 /* PopUpViewState.swift in Sources */,
