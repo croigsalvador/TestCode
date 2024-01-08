@@ -26,7 +26,7 @@ struct TripListView: View {
                         }
                     }
                 }
-            }.navigationBarItems(trailing: Button(action:viewModel.add) {
+            }.navigationBarItems(trailing: Button(action:viewModel.addIssue) {
                 Image(systemName: "plus")
                     .tint(Color.black)
             }).navigationBarTitle("Trips", displayMode: .inline)

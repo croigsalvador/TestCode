@@ -11,7 +11,7 @@ final class DeveloperInstances {
     static let shared = DeveloperInstances()
     
     var tripListViewModel: TripListViewModel {
-        TripListViewModel(fetchTrips: fetchTrips, getTripAnotables: GetTripAnnotablesImpl(), regionCalculator: RegionCalculatorImpl(), getStopInfo: getStopInfo)
+        TripListViewModel(coordinator: TripListCoordinator(), fetchTrips: fetchTrips, getTripAnotables: GetTripAnnotablesImpl(), regionCalculator: RegionCalculatorImpl(), getStopInfo: getStopInfo)
     }
     
     var fetchTrips: FetchTrips {
@@ -43,7 +43,7 @@ final class DeveloperInstances {
     }
     
     var contactFormViewModel: ContactFormViewModel {
-        ContactFormViewModel(viewState: ContactFormViewState(), saveReport: saveReport)
+        ContactFormViewModel(viewState: ContactFormViewState(), coordinator: ReportCoordinator(), saveReport: saveReport)
     }
     
     var saveReport: SaveReport {

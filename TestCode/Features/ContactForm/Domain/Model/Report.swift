@@ -18,6 +18,6 @@ struct Report {
 
 extension Report {
     func toDataModel() -> ReportDataModel {
-        return ReportDataModel(name: name, surname: surname, email: email, phone: phone ?? "", description: description)
+        return ReportDataModel(name: name, surname: surname, email: email, phone: phone ?? "", description: description, date: Date().timeIntervalSince1970)
     }
 }

@@ -13,23 +13,32 @@ class ContactFormViewModel: ObservableObject {
     @Published var viewState: ContactFormViewState
     private var cancellables: Set<AnyCancellable> = []
     private let saveReport: SaveReport
+    private let coordinator: ReportCoordinator
     
-    init(viewState: ContactFormViewState, saveReport: SaveReport) {
+    init(viewState: ContactFormViewState, coordinator: ReportCoordinator, saveReport: SaveReport) {
         self.viewState = viewState
         self.saveReport = saveReport
+        self.coordinator = coordinator
         setupSubscribers()
-        
-    }
-    
-    func onAppear() {
-        
     }
     
     func send() {
         if viewState.nextStepEnabled {
-            let report = Report(name: viewState.nameText, surname: viewState.surnameText, email: viewState.emailText, phone: nil, description: viewState.descriptionText, date: Date())
+            let phone = viewState.phoneText.isvalidPhoneNumber() ? viewState.phoneText : nil
+                
+            let report = Report(name: viewState.nameText, surname: viewState.surnameText, email: viewState.emailText, phone: phone, description: viewState.descriptionText, date: Date())
             saveReport.save(report)
+            reset()
         }
+    }
+    
+    func back() {
+        coordinator.pop()
+    }
+    
+    private func reset() {
+        viewState.hideKeyBoard = true
+        viewState.reset()
     }
     
     private func setupSubscribers() {
@@ -47,8 +56,8 @@ class ContactFormViewModel: ObservableObject {
             .map({ (text) -> Bool in
                 return text.count >= 4
             }).sink(receiveValue: { [weak self] isValid in
-                guard let sSelf = self else { return }
-                sSelf.viewState.nameTextIsValid = isValid
+                guard let self = self else { return }
+                self.viewState.nameTextIsValid = isValid
             }).store(in: &cancellables)
     }
     
@@ -59,8 +68,8 @@ class ContactFormViewModel: ObservableObject {
             .map({ (text) -> Bool in
                 return text.count >= 2
             }).sink(receiveValue: { [weak self] isValid in
-                guard let sSelf = self else { return }
-                sSelf.viewState.surnameTextIsValid = isValid
+                guard let self = self else { return }
+                self.viewState.surnameTextIsValid = isValid
             }).store(in: &cancellables)
     }
     
@@ -71,17 +80,17 @@ class ContactFormViewModel: ObservableObject {
             .map({ (text) -> Bool in
                 return text.count >= 2
             }).sink(receiveValue: { [weak self] isValid in
-                guard let sSelf = self else { return }
-                sSelf.viewState.emailTextIsValid = isValid
+                guard let self = self else { return }
+                self.viewState.emailTextIsValid = isValid
             }).store(in: &cancellables)
     }
+    
     
     private func addDescriptionValidationSubscriber() {
         viewState.$descriptionText
             .debounce(for: 0.2, scheduler: DispatchQueue.main)
-            .removeDuplicates()
             .map({ (text) -> Bool in
-                return text.count >= 4 && text.count > 200
+                return text.count > 4 && text.count <= 200
             }).sink(receiveValue: { [weak self] isValid in
                 guard let sSelf = self else { return }
                 sSelf.viewState.descriptionTextIsValid = isValid

@@ -25,7 +25,7 @@ class ReportUserDefaultsCache<Value>: CacheProtocol {
             self.fetchValues { reports in
                 var reportList = reports ?? []
                 reportList.append(value)
-
+                
                 if let reportsEncoded = try? PropertyListEncoder().encode(reportList) {
                     self.userDefaults.set(reportsEncoded, forKey: self.reportsKey)
                 }
@@ -34,16 +34,12 @@ class ReportUserDefaultsCache<Value>: CacheProtocol {
     }
     
     func fetchValues(completion: @escaping ([ReportDataModel]?) -> ()) {
-        queue.sync { [weak self] in
-            guard let self = self else { return }
-
-            guard let data = self.userDefaults.object(forKey: self.reportsKey) as? Data,
-                  let reports = try? PropertyListDecoder().decode([ReportDataModel].self, from: data) else {
-                completion(nil)
-                return
-            }
-            
-            completion(reports)
+        guard let data = self.userDefaults.object(forKey: self.reportsKey) as? Data,
+              let reports = try? PropertyListDecoder().decode([ReportDataModel].self, from: data) else {
+            completion(nil)
+            return
         }
+        
+        completion(reports)
     }
 }

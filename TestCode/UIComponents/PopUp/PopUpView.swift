@@ -56,8 +56,3 @@ struct PopUpView<Content:View>: View {
     }
 }
 
-//struct PopUpView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PopUpView(showingView: .constant(true),stopInfo:DeveloperInstances.shared.stopInfoApiModel.toDomainModel()!)
-//    }
-//}

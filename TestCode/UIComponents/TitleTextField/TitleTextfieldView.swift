@@ -1,6 +1,6 @@
 //
-//  IconTextfieldView.swift
-//  Camillion
+//  TitleTextfieldView.swift
+//   TestCode
 //
 //  Created by Carlos Roig Salvador on 22/3/23.
 //  Copyright © 2023 Carlos Roig. All rights reserved.
@@ -17,6 +17,7 @@ struct TitleTextfieldView: View {
     var limit = 50
     var showError: Bool = false
     var errorText: String = ""
+    var keyBoardType: UIKeyboardType = .default
 
     var body: some View {
         VStack {
@@ -24,6 +25,7 @@ struct TitleTextfieldView: View {
                 .topTitleTextFieldModifier()
             TextField(hint, text: text)
                 .textFieldBlockModifier()
+                .keyboardType(keyBoardType)
             if showError {
                 Text(errorText)
                     .textFieldErrorTextModifier()
@@ -62,7 +64,7 @@ struct TextFieldBlockModifier: ViewModifier {
         content
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(8)
-            .foregroundColor(Color.theme.secondaryTextColor)
+            .foregroundColor(Color.theme.primaryTextColor)
             .font(Font.theme.textfieldFont)
             .background(Color.theme.primaryBackgroundColor)
             .cornerRadius(8)
@@ -75,7 +77,6 @@ struct TextFieldErrorTextModifier: ViewModifier {
             .foregroundColor(Color.theme.textFieldErrorColor)
             .frame(maxWidth: .infinity, alignment: .leading)
             .multilineTextAlignment(.leading)
-            .padding(.top, 8)
             .padding(.trailing, 16)
     }
 }
@@ -85,7 +86,22 @@ struct TopTitleTextFieldModifier: ViewModifier {
         content.foregroundColor(Color.theme.primaryTextColor)
             .font(Font.theme.topTitleTextFieldFont)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.top, 4)
             .padding(.leading, 8)
+    }
+}
+
+struct EndEditingKeyboardOnDragGesture: ViewModifier {
+    func body(content: Content) -> some View {
+        content.highPriorityGesture (
+            DragGesture().onChanged { _ in
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            }
+        )
+    }
+}
+
+extension View {
+    func endEditingKeyboardOnDragGesture() -> some View {
+        return modifier(EndEditingKeyboardOnDragGesture())
     }
 }

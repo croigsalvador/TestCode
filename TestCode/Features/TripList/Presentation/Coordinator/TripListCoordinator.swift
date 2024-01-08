@@ -14,6 +14,7 @@ class TripListCoordinator: Coordinator {
     
     let container: DependencyContainer
     var rootViewController: UINavigationController?
+    var childCoordinator: Coordinator?
     
     init(container: DependencyContainer = DependencyContainer()) {
         self.container = container
@@ -28,13 +29,24 @@ class TripListCoordinator: Coordinator {
             return
         }
         
-        let viewModel = TripListViewModel(fetchTrips: fetchTrips, getTripAnotables: getTripAnnotables, regionCalculator: regionCalculator, getStopInfo: getStopInfo)
+        let viewModel = TripListViewModel(coordinator: self, fetchTrips: fetchTrips, getTripAnotables: getTripAnnotables, regionCalculator: regionCalculator, getStopInfo: getStopInfo)
         let view = TripListView(viewModel: viewModel)
         
         let viewController = CustomHostingController(shouldShowNavigationBar: false, rootView: view)
         self.rootViewController = UINavigationController(rootViewController: viewController)
     }
     
+    func showContactForm(){
+        let reportCoordinator = ReportCoordinator()
+        reportCoordinator.start()
+        
+        childCoordinator = reportCoordinator
+        
+        if let viewController = reportCoordinator.rootViewController {
+            rootViewController?.pushViewController(viewController, animated: true)
+        }
+    }
+        
     private func setupDependencies() {
         container.register { URLSession.shared }
         container.register { TripNetworkProviderImpl(session: try self.container.resolve()) as TripNetworkProvider }

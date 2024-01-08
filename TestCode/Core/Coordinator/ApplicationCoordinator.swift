@@ -13,16 +13,17 @@ import Dip
 class ApplicationCoordinator: ObservableObject, Coordinator {
     
     let window: UIWindow
+    var childCoordinator: TripListCoordinator?
   
     init(window: UIWindow) {
         self.window = window
     }
     
     func start() {
-        let tripCoordinator = TripListCoordinator()
-        tripCoordinator.start()
+        childCoordinator = TripListCoordinator()
+        childCoordinator?.start()
         
-        guard let rootViewController = tripCoordinator.rootViewController else { return }
+        guard let rootViewController = childCoordinator?.rootViewController else { return }
         
         self.window.rootViewController = rootViewController
     }

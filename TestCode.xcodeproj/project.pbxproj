@@ -45,6 +45,8 @@
 		1D7F31992B49C43B006D3DC8 /* CTAButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31982B49C43B006D3DC8 /* CTAButtonView.swift */; };
 		1D7F319C2B49C45B006D3DC8 /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F319B2B49C45B006D3DC8 /* ButtonType.swift */; };
 		1D7F319F2B49C580006D3DC8 /* TitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F319E2B49C580006D3DC8 /* TitleTextView.swift */; };
+		1D7F31A12B4B2A4E006D3DC8 /* ReportCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31A02B4B2A4E006D3DC8 /* ReportCoordinatorMock.swift */; };
+		1D7F31A32B4BFB74006D3DC8 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31A22B4BFB74006D3DC8 /* String+Validation.swift */; };
 		1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */; };
 		1DCA7CD52B3EE5890044DC0B /* TripUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */; };
 		1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD62B46D7090044DC0B /* TripRepository.swift */; };
@@ -173,6 +175,8 @@
 		1D7F31982B49C43B006D3DC8 /* CTAButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButtonView.swift; sourceTree = "<group>"; };
 		1D7F319B2B49C45B006D3DC8 /* ButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
 		1D7F319E2B49C580006D3DC8 /* TitleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextView.swift; sourceTree = "<group>"; };
+		1D7F31A02B4B2A4E006D3DC8 /* ReportCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCoordinatorMock.swift; sourceTree = "<group>"; };
+		1D7F31A22B4BFB74006D3DC8 /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
 		1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicError.swift; sourceTree = "<group>"; };
 		1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripUIModel.swift; sourceTree = "<group>"; };
 		1DCA7CD62B46D7090044DC0B /* TripRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepository.swift; sourceTree = "<group>"; };
@@ -431,6 +435,7 @@
 			children = (
 				1D7F316F2B49A121006D3DC8 /* SaveReportMock.swift */,
 				1D7F31822B49A8A5006D3DC8 /* ContactFormViewStateMock.swift */,
+				1D7F31A02B4B2A4E006D3DC8 /* ReportCoordinatorMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -588,6 +593,7 @@
 			isa = PBXGroup;
 			children = (
 				1DCA7CEC2B471DFD0044DC0B /* String+Date.swift */,
+				1D7F31A22B4BFB74006D3DC8 /* String+Validation.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -1137,6 +1143,7 @@
 				1DCA7CF72B4725670044DC0B /* Coordinator.swift in Sources */,
 				1DCA7D2E2B4767250044DC0B /* ColorPalette.swift in Sources */,
 				1DEDA4F82B3EE21A00A0897A /* Publisher+Utils.swift in Sources */,
+				1D7F31A32B4BFB74006D3DC8 /* String+Validation.swift in Sources */,
 				1DCA7D302B4767250044DC0B /* Theme.swift in Sources */,
 				1D7F31992B49C43B006D3DC8 /* CTAButtonView.swift in Sources */,
 				1DCA7CE42B46D8640044DC0B /* TripApiModel.swift in Sources */,
@@ -1207,6 +1214,7 @@
 				1DEDA4E52B3ED5C000A0897A /* TripListViewModelTests.swift in Sources */,
 				1DCA7D242B475E350044DC0B /* TripApiModelMock.swift in Sources */,
 				1DCA7D5C2B480CAE0044DC0B /* GetTripLocationsMock.swift in Sources */,
+				1D7F31A12B4B2A4E006D3DC8 /* ReportCoordinatorMock.swift in Sources */,
 				1DCA7CDD2B46D7ED0044DC0B /* TripNetworkProviderMock.swift in Sources */,
 				1D7F31692B499E93006D3DC8 /* ContactFormViewModelTests.swift in Sources */,
 				1DCA7D622B480DA30044DC0B /* RegionCalculatorMock.swift in Sources */,
@@ -1380,8 +1388,7 @@
 				INFOPLIST_FILE = TestCode/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1407,8 +1414,7 @@
 				INFOPLIST_FILE = TestCode/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

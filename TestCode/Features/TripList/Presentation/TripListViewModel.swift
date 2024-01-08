@@ -21,10 +21,12 @@ final class TripListViewModel: ObservableObject {
     private let getTripAnotables: GetTripAnnotables
     private let regionCalculator: RegionCalculator
     private let getStopInfo: GetStopInfo
+    private let coordinator: TripListCoordinator
     
     init(listState: TripListState = .idle,
          mapState: MapViewState = MapViewState(),
          popUpState: PopUpViewState = .idle,
+         coordinator: TripListCoordinator,
          fetchTrips: FetchTrips,
          getTripAnotables: GetTripAnnotables,
          regionCalculator: RegionCalculator,
@@ -36,6 +38,7 @@ final class TripListViewModel: ObservableObject {
         self.getTripAnotables = getTripAnotables
         self.regionCalculator = regionCalculator
         self.getStopInfo = getStopInfo
+        self.coordinator = coordinator
     }
     
     func onAppear() {
@@ -98,6 +101,8 @@ final class TripListViewModel: ObservableObject {
 
     }
     
-    func add() {}
+    func addIssue() {
+        coordinator.showContactForm()
+    }
     
 }

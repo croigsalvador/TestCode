@@ -14,12 +14,14 @@ final class ContactFormViewModelTests: XCTestCase {
     private var cancellables: Set<AnyCancellable> = []
     var viewStateMock: ContactFormViewStateMock!
     var saveReportMock: SaveReportMock!
+    var coordinatorMock: ReportCoordinatorMock!
     var sut: ContactFormViewModel!
 
     override func setUpWithError() throws {
         viewStateMock = ContactFormViewStateMock()
         saveReportMock = SaveReportMock()
-        sut = ContactFormViewModel(viewState: viewStateMock, saveReport: saveReportMock)
+        coordinatorMock = ReportCoordinatorMock()
+        sut = ContactFormViewModel(viewState: viewStateMock, coordinator: coordinatorMock, saveReport: saveReportMock)
     }
 
     override func tearDownWithError() throws {
