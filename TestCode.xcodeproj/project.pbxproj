@@ -94,7 +94,7 @@
 		1DCA7D452B476BDA0044DC0B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D442B476BDA0044DC0B /* MapView.swift */; };
 		1DCA7D512B47FD500044DC0B /* RegionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D502B47FD500044DC0B /* RegionCalculator.swift */; };
 		1DCA7D542B47FF4A0044DC0B /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCA7D532B47FF4A0044DC0B /* Polyline */; };
-		1DCA7D562B47FF810044DC0B /* GetTripLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D552B47FF810044DC0B /* GetTripLocations.swift */; };
+		1DCA7D562B47FF810044DC0B /* GetTripAnnotables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D552B47FF810044DC0B /* GetTripAnnotables.swift */; };
 		1DCA7D582B4802FA0044DC0B /* MapPolylineOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D572B4802FA0044DC0B /* MapPolylineOverlay.swift */; };
 		1DCA7D5A2B480A220044DC0B /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D592B480A220044DC0B /* MapViewState.swift */; };
 		1DCA7D5C2B480CAE0044DC0B /* GetTripLocationsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D5B2B480CAE0044DC0B /* GetTripLocationsMock.swift */; };
@@ -223,7 +223,7 @@
 		1DCA7D3F2B476B9B0044DC0B /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
 		1DCA7D442B476BDA0044DC0B /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		1DCA7D502B47FD500044DC0B /* RegionCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionCalculator.swift; sourceTree = "<group>"; };
-		1DCA7D552B47FF810044DC0B /* GetTripLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripLocations.swift; sourceTree = "<group>"; };
+		1DCA7D552B47FF810044DC0B /* GetTripAnnotables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripAnnotables.swift; sourceTree = "<group>"; };
 		1DCA7D572B4802FA0044DC0B /* MapPolylineOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPolylineOverlay.swift; sourceTree = "<group>"; };
 		1DCA7D592B480A220044DC0B /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		1DCA7D5B2B480CAE0044DC0B /* GetTripLocationsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripLocationsMock.swift; sourceTree = "<group>"; };
@@ -742,7 +742,7 @@
 			children = (
 				1DCA7D502B47FD500044DC0B /* RegionCalculator.swift */,
 				1DCA7D5D2B480CED0044DC0B /* RegionCalculatorImpl.swift */,
-				1DCA7D552B47FF810044DC0B /* GetTripLocations.swift */,
+				1DCA7D552B47FF810044DC0B /* GetTripAnnotables.swift */,
 				1DCA7D5F2B480D170044DC0B /* GetTripAnnotablesImpl.swift */,
 			);
 			path = Map;
@@ -1121,7 +1121,7 @@
 			files = (
 				1DCA7CD52B3EE5890044DC0B /* TripUIModel.swift in Sources */,
 				1DCA7D0E2B472B2C0044DC0B /* TripElementView.swift in Sources */,
-				1DCA7D562B47FF810044DC0B /* GetTripLocations.swift in Sources */,
+				1DCA7D562B47FF810044DC0B /* GetTripAnnotables.swift in Sources */,
 				1D2456472B48247800729295 /* Annotable.swift in Sources */,
 				1DCA7D5A2B480A220044DC0B /* MapViewState.swift in Sources */,
 				1D7F316B2B499FC2006D3DC8 /* SaveReport.swift in Sources */,
