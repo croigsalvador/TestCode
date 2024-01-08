@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class ReportRepositoryImpl<Cache:CacheProtocol>: ReportRepostory {
     
@@ -17,5 +18,8 @@ final class ReportRepositoryImpl<Cache:CacheProtocol>: ReportRepostory {
     
     func save(_ report: Report) {
         cache.saveValue(report.toDataModel() as! Cache.Value)
+        cache.fetchValues { values in
+            UIApplication.shared.applicationIconBadgeNumber = values?.count ?? 0
+        }
     }
 }
