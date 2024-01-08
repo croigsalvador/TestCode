@@ -35,5 +35,10 @@ final class ContactFormViewModelTests: XCTestCase {
         
         XCTAssertTrue(saveReportMock.reportSaved)
     }
+    
+    func test_userDidPressBackeShouldCallTripListCoordinator() {
+        sut.back()
+        XCTAssertTrue(coordinatorMock.wasCalled)
+    }
 
 }

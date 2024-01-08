@@ -17,16 +17,18 @@ final class TripListViewModelTests: XCTestCase {
     var regionCalculatorMock: RegionCalculatorMock!
     var getStopInfoMock: GetStopInfoMock!
     var mapStateMock: MapStateMock!
+    var tripListCoordinatorMock: TripListCoordinatorMock!
     var sut: TripListViewModel!
     private var cancellables: Set<AnyCancellable> = []
     
     override func setUpWithError() throws {
+        tripListCoordinatorMock = TripListCoordinatorMock()
         fetchTripsMock = FetchTripsMock()
         getTripAnnotablesMock = GetTripAnnotablesMock()
         regionCalculatorMock = RegionCalculatorMock()
         getStopInfoMock = GetStopInfoMock()
         mapStateMock = MapStateMock()
-        sut = TripListViewModel(mapState: mapStateMock, fetchTrips: fetchTripsMock, getTripAnotables: getTripAnnotablesMock, regionCalculator: regionCalculatorMock, getStopInfo: getStopInfoMock)
+        sut = TripListViewModel(mapState: mapStateMock, coordinator: tripListCoordinatorMock, fetchTrips: fetchTripsMock, getTripAnotables: getTripAnnotablesMock, regionCalculator: regionCalculatorMock, getStopInfo: getStopInfoMock)
     }
     
     override func tearDownWithError() throws {
@@ -175,6 +177,11 @@ final class TripListViewModelTests: XCTestCase {
         sut.userDidSelect(annotation: locationAnnotation)
         
         wait(for: [expectation], timeout: 2.0)
+    }
+    
+    func test_userDidSelectAddIssueShouldCallTripListCoordinator() {
+        sut.addIssue()
+        XCTAssertTrue(tripListCoordinatorMock.wasCalled)
     }
     
 }

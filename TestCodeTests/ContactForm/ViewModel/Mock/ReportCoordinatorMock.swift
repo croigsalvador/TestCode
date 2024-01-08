@@ -10,4 +10,10 @@ import Foundation
 
 final class ReportCoordinatorMock: ReportCoordinator {
     
+    var wasCalled = false
+    
+    override func pop() {
+        wasCalled = true 
+    }
+    
 }

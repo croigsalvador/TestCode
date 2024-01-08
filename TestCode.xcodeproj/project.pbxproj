@@ -47,6 +47,7 @@
 		1D7F319F2B49C580006D3DC8 /* TitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F319E2B49C580006D3DC8 /* TitleTextView.swift */; };
 		1D7F31A12B4B2A4E006D3DC8 /* ReportCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31A02B4B2A4E006D3DC8 /* ReportCoordinatorMock.swift */; };
 		1D7F31A32B4BFB74006D3DC8 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F31A22B4BFB74006D3DC8 /* String+Validation.swift */; };
+		1D91648E2B4C05D800C32CF6 /* TripListCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D91648D2B4C05D800C32CF6 /* TripListCoordinatorMock.swift */; };
 		1DCA7CD32B3EE49E0044DC0B /* BasicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */; };
 		1DCA7CD52B3EE5890044DC0B /* TripUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */; };
 		1DCA7CD72B46D7090044DC0B /* TripRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7CD62B46D7090044DC0B /* TripRepository.swift */; };
@@ -177,6 +178,7 @@
 		1D7F319E2B49C580006D3DC8 /* TitleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextView.swift; sourceTree = "<group>"; };
 		1D7F31A02B4B2A4E006D3DC8 /* ReportCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCoordinatorMock.swift; sourceTree = "<group>"; };
 		1D7F31A22B4BFB74006D3DC8 /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
+		1D91648D2B4C05D800C32CF6 /* TripListCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListCoordinatorMock.swift; sourceTree = "<group>"; };
 		1DCA7CD22B3EE49E0044DC0B /* BasicError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicError.swift; sourceTree = "<group>"; };
 		1DCA7CD42B3EE5890044DC0B /* TripUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripUIModel.swift; sourceTree = "<group>"; };
 		1DCA7CD62B46D7090044DC0B /* TripRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepository.swift; sourceTree = "<group>"; };
@@ -926,6 +928,7 @@
 				1DCA7D612B480DA30044DC0B /* RegionCalculatorMock.swift */,
 				1DCA7D632B48104B0044DC0B /* MapStateMock.swift */,
 				1D24564D2B4847B100729295 /* GetStopInfoMock.swift */,
+				1D91648D2B4C05D800C32CF6 /* TripListCoordinatorMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -1224,6 +1227,7 @@
 				1DCA7D642B48104B0044DC0B /* MapStateMock.swift in Sources */,
 				1DCA7D142B47551E0044DC0B /* TripListCoordinatorTests.swift in Sources */,
 				1D7F31832B49A8A5006D3DC8 /* ContactFormViewStateMock.swift in Sources */,
+				1D91648E2B4C05D800C32CF6 /* TripListCoordinatorMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
