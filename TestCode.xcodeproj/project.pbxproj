@@ -104,7 +104,6 @@
 		1DCA7D642B48104B0044DC0B /* MapStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA7D632B48104B0044DC0B /* MapStateMock.swift */; };
 		1DEDA4A32B3EC1BA00A0897A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */; };
 		1DEDA4A52B3EC1BA00A0897A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */; };
-		1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEDA4A62B3EC1BA00A0897A /* ViewController.swift */; };
 		1DEDA4AC2B3EC1BB00A0897A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4AB2B3EC1BB00A0897A /* Assets.xcassets */; };
 		1DEDA4AF2B3EC1BB00A0897A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4AD2B3EC1BB00A0897A /* LaunchScreen.storyboard */; };
 		1DEDA4DC2B3ECA3C00A0897A /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEDA4D82B3ECA3C00A0897A /* Montserrat-Medium.ttf */; };
@@ -234,7 +233,6 @@
 		1DEDA49F2B3EC1BA00A0897A /* TestCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1DEDA4A62B3EC1BA00A0897A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1DEDA4AB2B3EC1BB00A0897A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DEDA4AE2B3EC1BB00A0897A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DEDA4B02B3EC1BB00A0897A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -778,7 +776,6 @@
 				1DEDA4D52B3EC9F900A0897A /* Features */,
 				1DEDA4A22B3EC1BA00A0897A /* AppDelegate.swift */,
 				1DEDA4A42B3EC1BA00A0897A /* SceneDelegate.swift */,
-				1DEDA4A62B3EC1BA00A0897A /* ViewController.swift */,
 				1DEDA4AD2B3EC1BB00A0897A /* LaunchScreen.storyboard */,
 			);
 			path = TestCode;
@@ -1128,7 +1125,6 @@
 				1DCA7CD92B46D7310044DC0B /* FetchTripsImpl.swift in Sources */,
 				1DCA7D3D2B4769CD0044DC0B /* TripStatus.swift in Sources */,
 				1DCA7D042B4726AD0044DC0B /* DeveloperInstances.swift in Sources */,
-				1DEDA4A72B3EC1BA00A0897A /* ViewController.swift in Sources */,
 				1DCA7D582B4802FA0044DC0B /* MapPolylineOverlay.swift in Sources */,
 				1D7F317A2B49A6CF006D3DC8 /* ReportRepositoryImpl.swift in Sources */,
 				1DCA7D012B4726780044DC0B /* TripListView.swift in Sources */,
